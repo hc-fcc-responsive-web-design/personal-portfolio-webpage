@@ -1,6 +1,7 @@
 /*=====================*/
 /* BROWSER RESET       */
 /*=====================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,9 @@
 /*=====================*/
 /* VARIABLES           */
 /*=====================*/
+
 /* Colors */
+
 /* grays */
 $white: rgba(255, 255, 255, 1);
 $black: rgba(0, 0, 0, 1);
@@ -18,18 +21,22 @@ $gray: rgba(50, 50, 50, 1);
 $light-gray: rgba(80, 80, 80, 1);
 $dark-gray: rgba(35, 35, 35, 1);
 $transparent-gray-25: rgba(0, 0, 0, 0.25);
+
 /* greens */
 $green: rgba(59, 197, 136, 1);
+
 /* aqua */
 $aqua: rgba(49, 189, 229, 1);
 $dark-aqua: rgba(0, 118, 151, 1);
 $light-aqua: rgba(49, 204, 208, 1);
 $highlight-aqua: rgba(0, 255, 255, 0.4);
+
 /* sky */
 $sky: rgba(1, 117, 206, 1);
 $dark-sky: rgba(0, 71, 151, 1);
 $light-sky: rgba(0, 126, 223, 1);
 $highlight-sky: rgba(0, 154, 255, 0.4);
+
 /* ocean */
 $ocean: rgba(13, 79, 151, 1);
 $dark-ocean: rgba(0, 35, 74, 1);
@@ -61,6 +68,7 @@ $ease-out-transition: 0.3s ease-out;
 /*=====================*/
 /* TYPOGRAPHY          */
 /*=====================*/
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
@@ -72,6 +80,7 @@ $ease-out-transition: 0.3s ease-out;
   font-weight: 500;
   line-height: 1.15;
 }
+
 body {
   color: $dark-gray;
   font-family: 'Domine', serif;
@@ -79,48 +88,59 @@ body {
   font-weight: 400;
   line-height: 1.65;
 }
+
 h1 {
   @include headers-shared;
   font-size: 11.391em;
   font-weight: 400;
   margin-top: 0;
 } /* 16 x 11.391 = 182.25 */
+
 h2 { 
   @include headers-shared;
   font-size: 7.594em;
   } /* 16 x 7.594 = 121.5 */
+
 h3 {
   @include headers-shared;
   font-size: 5.063em;
 } /* 16 x 5.053 = 81 */
+
 h4 {
   @include headers-shared;
   font-size: 3.375em;
 } /* 16 x 3.375em = 54 */
+
 h5 {
   @include headers-shared;
   font-size: 2.25em;
 } /* 16 x 2.25 = 36 */
+
 h6 {
   @include headers-shared;
   font-size: 1.5em;
 } /* 16 x 1.5 = 24 */
+
 p  { 
   font-size: 1em;
   margin-bottom: 1.15rem;
 } /* 16 x 1 = 16 */
+
 small, .text_small {
   font-size: 0.8em;
 }
+
 /*=====================*/
 /* MIXINS              */
 /*=====================*/
+
 /* Background Effects */
 @mixin background-pattern ($url, $color, $width, $height) {
   background-image: $url;
   background-color: $color;
   background-size: $width $height;
 }
+
 /* Text Effects */
 @mixin text-shadow-one {
   color: white;
@@ -129,6 +149,7 @@ small, .text_small {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
+
 @mixin text-inset($color, $highlight) {
   background-color: $color;
   color: transparent;
@@ -137,16 +158,19 @@ small, .text_small {
      -moz-background-clip: text;
           background-clip: text;
 }
+
 @mixin text-embossed {
   text-shadow: 
     -1px -1px 1px rgba(255, 255, 255, 0.5), 
     1px 1px 1px rgba(0, 0, 0, 0.5);
 	opacity: 0.3;
 }
+
 /* Box Effects */
 @mixin box-shadow {
    box-shadow: 1px 4px 4px $transparent-gray-25;
 }
+
 @mixin box-vignette {
   background:
     radial-gradient(
@@ -154,21 +178,26 @@ small, .text_small {
       transparent 60%,
       black 170%);
 }
+
 /*=====================*/
 /* GENERAL             */
 /*=====================*/
+
 html {
   scroll-padding-top: $nav-height;
 }
+
 .section {
   box-shadow: $box-shadow;
   padding: $nav-height $spacing-1;
   position: relative;
 }
+
 .header {
   width: 100%;
   text-align: center;
 }
+
 .link {
   text-decoration: none;
   display: block;
@@ -177,6 +206,7 @@ html {
     color: inherit;
   }
 }
+
 .vignette {
   @include box-vignette;
   height: 100%;
@@ -191,6 +221,7 @@ html {
 /*=====================*/
 /* MAIN                */
 /*=====================*/
+
 #main {
   display: grid;
   grid-template-areas:
@@ -208,49 +239,49 @@ html {
     $nav-height;
   width: 100%;
   
-    #navbar {
-      background-color: $white;
-      box-shadow: $box-shadow;
-      display: flex;
-      grid-area: navbar;
-      height: $nav-height;
-      justify-content: center;
-      position: fixed;
-      width: 100%;
-      z-index: 6;
-    }
-  
-    #welcome-section {
-      @include background-pattern($seigaiha-url, $aqua, 100px, 51px);
-      align-items: center;
-      display: flex;
-      grid-area: about;
-      justify-content: center;
-      z-index: 4;
-    }
-  
-    #projects {
-      @include background-pattern($asanoha-url, $dark-gray, 100px, 58px);
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      grid-area: projects;
-      z-index: 3;
-    }
-  
-    #contact {
-      @include background-pattern($goma-url, $ocean, 100px, 58px);
-      display: flex;
-      align-items: center;
-      grid-area: contact;
-      z-index: 2;
-    }
-  
-    #footer {
-      background-color: $dark-gray;
-      grid-area: footer;
-      z-index: 1;
-    }
+	#navbar {
+	  background-color: $white;
+	  box-shadow: $box-shadow;
+	  display: flex;
+	  grid-area: navbar;
+	  height: $nav-height;
+	  justify-content: center;
+	  position: fixed;
+	  width: 100%;
+	  z-index: 6;
+	}
+	
+	#welcome-section {
+	  @include background-pattern($seigaiha-url, $aqua, 100px, 51px);
+	  align-items: center;
+	  display: flex;
+	  grid-area: about;
+	  justify-content: center;
+	  z-index: 4;
+	}
+	
+	#projects {
+	  @include background-pattern($asanoha-url, $dark-gray, 100px, 58px);
+	  align-items: center;
+	  display: flex;
+	  flex-direction: column;
+	  grid-area: projects;
+	  z-index: 3;
+	}
+	
+	#contact {
+	  @include background-pattern($goma-url, $ocean, 100px, 58px);
+	  display: flex;
+	  align-items: center;
+	  grid-area: contact;
+	  z-index: 2;
+	}
+	
+	#footer {
+	  background-color: $dark-gray;
+	  grid-area: footer;
+	  z-index: 1;
+	}
 }
 
 /*=====================*/
@@ -313,6 +344,7 @@ html {
 /*=====================*/
 /* PROJECTS            */
 /*=====================*/
+
 #projects {
 
   .tiles {
@@ -382,6 +414,7 @@ html {
 /*=====================*/
 /* CONTACT             */
 /*=====================*/
+
 #contact {
   justify-content: center;
 
