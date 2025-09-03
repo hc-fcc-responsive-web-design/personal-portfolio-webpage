@@ -2,6 +2,9 @@
 /* BROWSER RESET       */
 /*=====================*/
 
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine&family=Great+Vibes&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,174 +12,68 @@
 }
 
 /*=====================*/
-/* VARIABLES           */
-/*=====================*/
-
-/* Colors */
-
-/* grays */
-$white: rgba(255, 255, 255, 1);
-$black: rgba(0, 0, 0, 1);
-$gray: rgba(50, 50, 50, 1);
-$light-gray: rgba(80, 80, 80, 1);
-$dark-gray: rgba(35, 35, 35, 1);
-$transparent-gray-25: rgba(0, 0, 0, 0.25);
-
-/* greens */
-$green: rgba(59, 197, 136, 1);
-
-/* aqua */
-$aqua: rgba(49, 189, 229, 1);
-$dark-aqua: rgba(0, 118, 151, 1);
-$light-aqua: rgba(49, 204, 208, 1);
-$highlight-aqua: rgba(0, 255, 255, 0.4);
-
-/* sky */
-$sky: rgba(1, 117, 206, 1);
-$dark-sky: rgba(0, 71, 151, 1);
-$light-sky: rgba(0, 126, 223, 1);
-$highlight-sky: rgba(0, 154, 255, 0.4);
-
-/* ocean */
-$ocean: rgba(13, 79, 151, 1);
-$dark-ocean: rgba(0, 35, 74, 1);
-$light-ocean: rgba(0, 60, 112, 1);
-$highlight-ocean: rgba(0, 129, 255, 0.4);
-
-/* Box Effects */
-$box-shadow: $transparent-gray-25 0px 2px 5px;
-
-/* SVG URLs */
-$seigaiha-url: url("https://gist.githubusercontent.com/5t4r8ucK/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
-$asanoha-url: url("https://gist.githubusercontent.com/5t4r8ucK/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
-$goma-url: url("https://gist.githubusercontent.com/5t4r8ucK/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
-
-/* PNG URLs*/
-$noise-url: url("https://raw.githubusercontent.com/5t4r8ucK/portfolio-page/master/noise.png");
-
-/* Sizes */
-$nav-height: 1.725rem + 2.75rem + 1.05rem; /* h6 line height + margin-top + margin-bottom */
-$spacing-1: 2rem;
-
-/* Breakpoints */
-$mobile-width: 20rem;
-$fhd-width: 67.5rem;
-
-/* Effects */
-$ease-out-transition: 0.3s ease-out;
-
-/*=====================*/
 /* TYPOGRAPHY          */
 /*=====================*/
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Domine&family=Great+Vibes&display=swap');
-
-/* Perfect Fifth Typographic Scale */
-@mixin headers-shared {
-  margin: 2.75rem 0 1.05rem;
-  font-weight: 500;
-  line-height: 1.15;
-}
-
 body {
-  color: $dark-gray;
-  font-family: 'Domine', serif;
+  color: #232323;
+  font-family: "Domine", serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.65;
 }
 
 h1 {
-  @include headers-shared;
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 11.391em;
   font-weight: 400;
   margin-top: 0;
-} /* 16 x 11.391 = 182.25 */
+}
 
-h2 { 
-  @include headers-shared;
+h2 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 7.594em;
-  } /* 16 x 7.594 = 121.5 */
+}
 
 h3 {
-  @include headers-shared;
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 5.063em;
-} /* 16 x 5.053 = 81 */
+}
 
 h4 {
-  @include headers-shared;
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 3.375em;
-} /* 16 x 3.375em = 54 */
+}
 
 h5 {
-  @include headers-shared;
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 2.25em;
-} /* 16 x 2.25 = 36 */
+}
 
 h6 {
-  @include headers-shared;
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
   font-size: 1.5em;
-} /* 16 x 1.5 = 24 */
+}
 
-p  { 
+p {
   font-size: 1em;
   margin-bottom: 1.15rem;
-} /* 16 x 1 = 16 */
+}
 
 small, .text_small {
   font-size: 0.8em;
-}
-
-/*=====================*/
-/* MIXINS              */
-/*=====================*/
-
-/* Background Effects */
-@mixin background-pattern ($url, $color, $width, $height) {
-  background-image: $url;
-  background-color: $color;
-  background-size: $width $height;
-}
-
-/* Text Effects */
-@mixin text-shadow-one {
-  color: white;
-  text-shadow: 1px 4px 4px $transparent-gray-25;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-}
-
-@mixin text-inset($color, $highlight) {
-  background-color: $color;
-  color: transparent;
-  text-shadow: 1px 2px 3px $highlight;
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-}
-
-@mixin text-embossed {
-  text-shadow: 
-    -1px -1px 1px rgba(255, 255, 255, 0.5), 
-    1px 1px 1px rgba(0, 0, 0, 0.5);
-	opacity: 0.3;
-}
-
-/* Box Effects */
-@mixin box-shadow {
-   box-shadow: 1px 4px 4px $transparent-gray-25;
-}
-
-@mixin box-vignette {
-  background:
-    radial-gradient(
-      circle at bottom,
-      transparent 60%,
-      black 170%);
 }
 
 /*=====================*/
@@ -184,12 +81,12 @@ small, .text_small {
 /*=====================*/
 
 html {
-  scroll-padding-top: $nav-height;
+  scroll-padding-top: 5.525rem;
 }
 
 .section {
-  box-shadow: $box-shadow;
-  padding: $nav-height $spacing-1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
+  padding: 5.525rem 2rem;
   position: relative;
 }
 
@@ -201,17 +98,16 @@ html {
 .link {
   text-decoration: none;
   display: block;
-
-  &:visited {
-    color: inherit;
-  }
+}
+.link:visited {
+  color: inherit;
 }
 
 .vignette {
-  @include box-vignette;
+  background: radial-gradient(circle at bottom, transparent 60%, black 170%);
   height: 100%;
   left: 0;
-  pointer-events: none;  
+  pointer-events: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -224,191 +120,179 @@ html {
 
 #main {
   display: grid;
-  grid-template-areas:
-    "navbar"
-    "about"
-    "projects"
-    "contact"
-    "footer";
+  grid-template-areas: "navbar" "about" "projects" "contact" "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 
-    auto
-    minmax(100vh, auto) 
-    minmax(100vh, auto)
-    minmax(100vh, auto) 
-    $nav-height;
+  grid-template-rows: auto minmax(100vh, auto) minmax(100vh, auto) minmax(100vh, auto) 5.525rem;
   width: 100%;
-  
-	#navbar {
-	  background-color: $white;
-	  box-shadow: $box-shadow;
-	  display: flex;
-	  grid-area: navbar;
-	  height: $nav-height;
-	  justify-content: center;
-	  position: fixed;
-	  width: 100%;
-	  z-index: 6;
-	}
-	
-	#welcome-section {
-	  @include background-pattern($seigaiha-url, $aqua, 100px, 51px);
-	  align-items: center;
-	  display: flex;
-	  grid-area: about;
-	  justify-content: center;
-	  z-index: 4;
-	}
-	
-	#projects {
-	  @include background-pattern($asanoha-url, $dark-gray, 100px, 58px);
-	  align-items: center;
-	  display: flex;
-	  flex-direction: column;
-	  grid-area: projects;
-	  z-index: 3;
-	}
-	
-	#contact {
-	  @include background-pattern($goma-url, $ocean, 100px, 58px);
-	  display: flex;
-	  align-items: center;
-	  grid-area: contact;
-	  z-index: 2;
-	}
-	
-	#footer {
-	  background-color: $dark-gray;
-	  grid-area: footer;
-	  z-index: 1;
-	}
+}
+
+#main #navbar {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
+  display: flex;
+  grid-area: navbar;
+  height: 5.525rem;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+}
+
+#main #welcome-section {
+  background-image: url("https://gist.githubusercontent.com/5t4r8ucK/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
+  background-color: #31bde5;
+  background-size: 100px 51px;
+  align-items: center;
+  display: flex;
+  grid-area: about;
+  justify-content: center;
+  z-index: 4;
+}
+
+#main #projects {
+  background-image: url("https://gist.githubusercontent.com/5t4r8ucK/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
+  background-color: #232323;
+  background-size: 100px 58px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: projects;
+  z-index: 3;
+}
+
+#main #contact {
+  background-image: url("https://gist.githubusercontent.com/5t4r8ucK/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
+  background-color: #0d4f97;
+  background-size: 100px 58px;
+  display: flex;
+  align-items: center;
+  grid-area: contact;
+  z-index: 2;
+}
+
+#main #footer {
+  background-color: #232323;
+  grid-area: footer;
+  z-index: 1;
 }
 
 /*=====================*/
 /* NAVBAR              */
 /*=====================*/
-#navbar {
-  
-  .links {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
-    
-    li {
-      height: 100%;
- 
-      .link {
-        height: 100%;
-        display: flex;
-        align-items: center;
 
-        h6 {
-          color: $gray;
-          font-variant-caps: all-small-caps;
-          font-weight: 700;
-          letter-spacing: 0.05em;
-          margin: 0;
-          padding: 0.575em $spacing-1/2;
-          transition: $ease-out-transition;
-          
-          &:hover {
-            border-bottom: 1px solid $gray;
-            border-top: 1px solid $gray;
-          }
-        }
-      }
-    }
-  }
-} 
+#navbar .links {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#navbar .links li {
+  height: 100%;
+}
+
+#navbar .links li .link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#navbar .links li .link h6 {
+  color: #323232;
+  font-variant-caps: all-small-caps;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0.575em 1rem;
+  transition: 0.3s ease-out;
+}
+	
+#navbar .links li .link h6:hover {
+  border-bottom: 1px solid #323232;
+  border-top: 1px solid #323232;
+}
 
 /*=====================*/
 /* ABOUT               */
 /*=====================*/
-#welcome-section {
 
-  .inset {
-    @include text-inset($dark-aqua, $highlight-aqua);
-  }
-  
-  .display {
-  font-family: 'Arizonia', cursive;
-  }
-  
-  .byline {
-    font-weight: 600;
-  }
+#welcome-section .inset {
+  background-color: #007697;
+  color: transparent;
+  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+#welcome-section .display {
+  font-family: "Arizonia", cursive;
+}
+
+#welcome-section .byline {
+  font-weight: 600;
 }
 
 /*=====================*/
 /* PROJECTS            */
 /*=====================*/
 
-#projects {
+#projects .tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  margin-top: 5.525rem;
+  max-width: 67.5rem;
+  width: 100%;
+}
 
-  .tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($mobile-width, 1fr));
-    grid-gap: $spacing-1;
-    margin-top: $nav-height;
-    max-width: $fhd-width;
-    width: 100%;
-  
-    .project-tile{
-      @include box-shadow;
-      align-items: center;
-      background: $white;
-      border-radius: $spacing-1/8;
+#projects .tiles .project-tile {
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  background: white;
+  border-radius: 0.25rem;
+}
 
-      .link {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        
-        &:hover {
-          
-          .tile-image {
-            
-            img {
-              filter: grayscale(0%);
-            }
-          }
-        }
-        
-        .tile-image {
-          box-sizing: border-box;
-          height: auto;
-          padding: 0;
-          width: 100%;
+#projects .tiles .project-tile .link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-          img {
-            border-radius: $spacing-1/8  $spacing-1/8 0 0;
-            display: block;
-            filter: grayscale(100%);
-            object-fit: cover;
-            transition: $ease-out-transition;
-            width: 100%;
-          }
-        }
-        
-        .tile-header {
-          background-color: $aqua;
-          border-radius: 0 0 $spacing-1/8 $spacing-1/8;
-          flex-grow: 2;
-          padding: 0.575em $spacing-1/2;
-          width: 100%;
-          
-          .tile-title {
-            font-weight: 700;
-            letter-spacing: 0.075em;
-            text-align: center;
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
+#projects .tiles .project-tile .link:hover .tile-image img {
+  filter: grayscale(0%);
+}
+
+#projects .tiles .project-tile .link .tile-image {
+  box-sizing: border-box;
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+#projects .tiles .project-tile .link .tile-image img {
+  border-radius: 0.25rem 0.25rem 0 0;
+  display: block;
+  filter: grayscale(100%);
+  object-fit: cover;
+  transition: 0.3s ease-out;
+  width: 100%;
+}
+
+#projects .tiles .project-tile .link .tile-header {
+  background-color: #31bde5;
+  border-radius: 0 0 0.25rem 0.25rem;
+  flex-grow: 2;
+  padding: 0.575em 1rem;
+  width: 100%;
+}
+
+#projects .tiles .project-tile .link .tile-header .tile-title {
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-align: center;
+  margin: 0;
 }
 
 /*=====================*/
@@ -417,44 +301,38 @@ html {
 
 #contact {
   justify-content: center;
+}
 
-  .contact-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: $nav-height;
-    max-width: $fhd-width;
-    width: 100%;
-    
-    @media screen and (max-width: $fhd-width) {
-      flex-direction: column;
-    }
-    
-    .link {
-      color: $white;
-      display: flex;
-      flex-direction: row;
-      padding: 0.575em $spacing-1/2;
-      
-      .icon {
-        font-size: 2.587em;
-        line-height: 1;
-        width: 1em;
-        height: 1em;
-        margin-right: 1rem;
-      }
-      
-      h5 {
-        margin: 0;
-      }
-    }
+#contact .contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5.525rem;
+  max-width: 67.5rem;
+  width: 100%;
+}
+	
+@media screen and (max-width: 67.5rem) {
+  #contact .contact-links {
+    flex-direction: column;
   }
 }
 
+#contact .contact-links .link {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 0.575em 1rem;
+}
 
-/*=====================*/
-/* FOOTER              */
-/*=====================*/
-#footer {
-  
+#contact .contact-links .link .icon {
+  font-size: 2.587em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  margin-right: 1rem;
+}
+
+#contact .contact-links .link h5 {
+  margin: 0;
 }
