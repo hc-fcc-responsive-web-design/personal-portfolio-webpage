@@ -700,8 +700,8 @@ $text = preg_replace($search,$replace,$text);</code></pre>
     As with <a class="ext-link" href="#Letterspace_all_strings_of_capitals_and_small_caps,_and_all_long_strings_of_digits">letterspacing strings of capitals</a>, adding a <code>span</code> every time you need to kern a letter pair could become tedious and so regular expressions could come to the rescue once more. This <abbr>PHP</abbr> function uses a regular expression to replace insert a <code>span</code> into any string of ‘To’ or ‘Wa’:
           </p>
           <pre data-lang="PHP"><code>$search = '/(T)(o)|(W)(a)/';
-    $replace = '&lt;span class="kern"&gt;$1$3&lt;/span&gt;$2$4';
-    $text = preg_replace($search,$replace,$text);</pre></code>
+$replace = '&lt;span class="kern"&gt;$1$3&lt;/span&gt;$2$4';
+$text = preg_replace($search,$replace,$text);</pre></code>
           <h3>
             The Future
           </h3>
@@ -796,9 +796,9 @@ $text = preg_replace($search,$replace,$text);</code></pre>
       Chapter &lt;strong&gt;2&lt;/strong&gt;
       Poliphilo&amp;#8217;s Dream
     &lt;/th&gt;
-        &lt;td&gt;11&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/table&gt;</code></pre>
+    &lt;td&gt;11&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
           <p>
             The CSS looks like this:
           </p>
