@@ -346,7 +346,13 @@
           <p>
             In <abbr>CSS</abbr>, word space is set with the <code>word-spacing</code> property which has a default value of <code>normal</code>. The default word space is equivalent to approximately 0.25 em, although the exact value will depend on information encoded within the digital font file. To change the word spacing, you should specify a length in ems. This length is added to the existing word space; that is to say <code>word-spacing</code> does not set the actual space between words, it sets an increment to the existing spacing. For example: 
           </p>
-          <pre data-lang="CSS"><code>p {&#10;&nbsp;word-spacing: 0.25em;&#10;}&#10;&#10;h1 {&#10;&nbsp;word-spacing: -0.125em;&#10;}</code></pre>
+          <pre data-lang="CSS"><code>p {
+  word-spacing: 0.25em;
+}
+
+h1 {
+  word-spacing: -0.125em;
+}</code></pre>
           <p>
             In the preceding example, word space in paragraphs is increased by 0.25 em (effectively doubling it) and the word space in top level headings is decreased by 0.125 em (effectively halving it).
           </p>
