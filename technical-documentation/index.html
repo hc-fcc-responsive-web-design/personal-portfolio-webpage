@@ -853,11 +853,26 @@ td {
             Again a simple table has been used for the markup:
           </p>
           <pre data-lang="HTML"><code>&lt;table&gt;
-  &lt;tr&gt;&lt;th&gt;Prologue&lt;/th&gt;&lt;td&gt;page 5&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Points of Possible Agreement&lt;/th&gt;&lt;td&gt;page 9&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Irreconcilable Differences&lt;/th&gt;&lt;td&gt;page 11&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Conclusion&lt;/th&gt;&lt;td&gt;page 163&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Index&lt;/th&gt;&lt;td&gt;page 164&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Prologue&lt;/th&gt;
+    &lt;td&gt;page 5&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Points of Possible Agreement&lt;/th&gt;
+    &lt;td&gt;page 9&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Irreconcilable Differences&lt;/th&gt;
+    &lt;td&gt;page 11&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Conclusion&lt;/th&gt;
+    &lt;td&gt;page 163&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Index&lt;/th&gt;
+    &lt;td&gt;page 164&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
           <p>
             The <abbr>CSS</abbr> looks like this:
@@ -1262,70 +1277,72 @@ p + p + p + p {
             When setting verse, whether on the web or otherwise, the primary concern is not to deprive it of its “chosen form”, including matters of spacing and visual structure (as this is considered, in many poetic works, to be at least as important as the words themselves). As such, a <code>pre</code> (pre-formatted) element is most apt to setting verse.
           </p>
           <pre data-lang="HTML"><code>&lt;blockquote class="verse"&gt;
-    &lt;pre&gt;God guard me from those thoughts men think
-    In the mind alone;
-    He that sings a lasting song
-    Thinks in a marrow bone.&lt;/pre&gt;
-    &lt;/blockquote&gt;</code></pre>
+&lt;pre&gt;God guard me from those thoughts men think
+In the mind alone;
+He that sings a lasting song
+Thinks in a marrow bone.&lt;/pre&gt;
+&lt;/blockquote&gt;</code></pre>
           <p>
             In its default state the <code>pre</code> element is usually rendered using a monospaced font, so this should normally be changed to a more fitting typeface. Setting the <code>font-family</code> to inherit the typeface from the surrounding text may be a good start:
           </p>
           <pre data-lang="CSS"><code>.verse pre {
-      font-family: inherit;
-    }</code></pre>
+  font-family: inherit;
+}</code></pre>
           <p>
             A logical way to center the verse on the longest line would be to simply specify <code>width:auto</code> and <code>margin:0 auto</code>. Unfortunately, due to browsers’ rendering of preformatted elements, the element will still be considered to comprise full-width lines, so no centering will occur. However we can work around this by specifying the <code>pre</code> element to display as a <code>table</code> as follows:
           </p>
           <pre data-lang="CSS"><code>.verse pre {
-      font-family: inherit;
-      display: table;
-      width: auto;
-      margin: 0 auto;
-    }</code></pre>
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}</code></pre>
           <p>
             The preceding rules achieve the desired layout in Firefox, Safari and Opera 9. However <code>margin:0 auto</code> will not center elements in Internet Explorer 6 or 7, without a specific width being set. To work around this, a new <code>span</code> element containing the entire block of verse must be nested within the <code>pre</code> element as follows:
           </p>
           <pre data-lang="HTML"><code>&lt;blockquote class="verse"&gt;
-    &lt;pre&gt;&lt;span&gt;God guard me from those thoughts men think
-    In the mind alone;
-    He that sings a lasting song
-    Thinks in a marrow bone.&lt;/span&gt;&lt;/pre&gt;
-    &lt;/blockquote&gt;</code></pre>
+&lt;pre&gt;&lt;span&gt;God guard me from those thoughts men think
+In the mind alone;
+He that sings a lasting song
+Thinks in a marrow bone.&lt;/span&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;</code></pre>
           <p>
             This <code>span</code> can then be centered in Internet Explorer applying <code>text-align:center</code> to the <code>pre</code> and resetting the text alignment on the <code>span</code> element.
           </p>
           <pre data-lang="CSS"><code>.verse pre {
-      text-align: center;
-    }
-    .verse pre span {
-      text-align: left;
-    }</code></pre>
+  text-align: center;
+}
+
+.verse pre span {
+  text-align: left;
+}</code></pre>
           <p>
             Much like other browsers, Internet Explorer considers any preformatted content to have full-width lines; to counter this, the <code>span</code> can be set to <code>display:inline-block</code>. This in turn causes Internet Explorer to ignore white-space formatting, so we must re-set the <code>span</code> to <code>white-space:pre</code>. This gives us:
           </p>
           <pre data-lang="CSS"><code>.verse pre {
-      text-align: center;
-    }
-    .verse pre span {
-      text-align: left;
-      display: inline-block;
-      white-space: pre;
-    }</code></pre>
+  text-align: center;
+}
+
+.verse pre span {
+  text-align: left;
+  display: inline-block;
+  white-space: pre;
+}</code></pre>
           <p>
             The <code>display:inline-block</code> in the preceding rule causes Gecko-based browsers such as Firefox and Camino to incorrectly render the contents. Fortunately these rules are only required for Internet Explorer, so we can write them in a separate style sheet, included using conditional comments (see <a class="ext-link" href="http://www.quirksmode.org/css/condcom.html" target="_blank">Quirksmode</a> for more info):
           </p>
           <pre data-lang="HTML"><code>&lt;!-[if lte IE 7]&gt;
-    &lt;link rel="stylesheet" type="text/css" href="ie-lte-7.css" /&gt;
-    &lt;![endif]-&gt;</code></pre>
+  &lt;link rel="stylesheet" type="text/css" href="ie-lte-7.css" /&gt;
+&lt;![endif]-&gt;</code></pre>
           <p>
             Here’s the final rendered example of prose, set flush left & ragged right, and centered on the longest line:
           </p>
           <figure id="example-12">
             <p>
               <pre><span>God guard me from those thoughts men think
-    In the mind alone;
-    He that sings a lasting song
-    Thinks in a marrow bone.</span></pre>
+In the mind alone;
+He that sings a lasting song
+Thinks in a marrow bone.</span></pre>
             </p>
           </figure>
         </section>
@@ -1365,15 +1382,15 @@ p + p + p + p {
             Until recently, the <a class="ext-link" href="http://www.w3.org/TR/css3-text/#hyphenate" target="_blank"><abrr>CSS</abbr> 3 Text module</a> contained the <code>hyphenate</code> property which could be set to <code>auto</code> or <code>none</code>. This property introduced the concept of automatic hyphenation to browsers, and would require that the web browser has a hyphenation dictionary for the language of the text being hyphenated. For example:
           </p>
           <pre data-lang="CSS"><code>p {
-      hyphenate: auto;
-    }</code></pre>
+  hyphenate: auto;
+}</code></pre>
           <p>
             At the time of writing, the latest <a class="ext-link" href="http://www.w3.org/TR/2007/WD-css3-text-20070306/" target="_blank">Working Draft of March 2007</a>, states that the definition of the hyphenation feature is still very much up-in-the-air, but it’s likely that advanced hyphenation controls will be introduced. The <a class="ext-link" href="http://www.w3.org/TR/2007/WD-css3-gcpm-20070205/#hyphenation" target="_blank"><abbr>CSS</abbr> 3 Paged Media module</a> has more details of the hyphenation properties originally proposed, among these are the <code>hyphenate-before</code> and <code>hyphenate-after</code> properties which specify the minimum number of characters in a hyphenated word before and after the hyphenation character. For example:
           </p>
           <pre data-lang="CSS"><code>p {
-      hyphenate-before: 2;
-      hyphenate-after: 3;
-    }</code></pre>
+  hyphenate-before: 2;
+  hyphenate-after: 3;
+}</code></pre>
         </section>
         <section id="2.4.3_Avoid_more_than_three_consecutive_hyphenated_lines"
                  class="main-section">
@@ -1392,9 +1409,9 @@ p + p + p + p {
             Hyphenation will be included in the <a class="ext-link" href="http://www.w3.org/TR/css3-text/#hyphenate" target="_blank"><abbr>CSS</abbr> 3 Text module</a>, but at the time of writing, the definition of the hyphenation feature is still very much up-in-the-air. Currently the <a class="ext-link" href="http://www.w3.org/TR/2007/WD-css3-gcpm-20070205/#hyphenation" target="_blank"><abbr>CSS</abbr> 3 Paged Media module</a> has more details of the hyphenation properties originally proposed, and among these is the <code>hyphenate-lines</code> property which specifies the maximum number of successive hyphenated lines in an element. For example:
           </p>
           <pre data-lang="CSS"><code>p {
-      hyphenate: auto;
-      hyphenate-lines: 3;
-    }</code></pre>
+  hyphenate: auto;
+  hyphenate-lines: 3;
+}</code></pre>
           <p>
             A value of <code>none</code> means that there is no limit to the number of successive hyphenated lines.
           </p>
@@ -1429,11 +1446,12 @@ p + p + p + p {
             The <a class="ext-link" href="http://www.w3.org/TR/css3-text/#hyphenate"><abbr>CSS</abbr> 3 Text module</a> may also introduce a <code>hyphenate-dictionary</code> property to specify which hyphenation dictionary to use. For example:
           </p>
           <pre data-lang="CSS"><code>html[lang=en] {
-      hyphenate-dictionary:url(hyph_en.dic);
-    }
-    html[lang=fr] {
-      hyphenate-dictionary:url(hyph_fr.dic);
-    }</code></pre>
+  hyphenate-dictionary:url(hyph_en.dic);
+}
+
+html[lang=fr] {
+  hyphenate-dictionary:url(hyph_fr.dic);
+}</code></pre>
           <p>
             A value of <code>auto</code> would indicate that the built-in dictionaries, if any, should be used.
           </p>
@@ -1459,8 +1477,8 @@ p + p + p + p {
             It should not really be expected of authors to type <code>&amp;nbsp;</code> everytime a non-breaking space is required. This is a job that, to some degree, can be performed automatically by a content management system. To demonstrate this by way of simple <abbr>PHP</abbr> example, a regular expression function could automatically insert non-breaking spaces as follows:
           </p>
           <pre data-lang="PHP"><code>$search = '/([0-9]) ([a-zA-Z])/';
-    $replace = '$1&amp;nbsp;$2';
-    $text = preg_replace($search,$replace,$text);</code></pre>
+$replace = '$1&amp;nbsp;$2';
+$text = preg_replace($search,$replace,$text);</code></pre>
           <p>
             This function looks for sequences of a number followed by a space followed by a letter and replaces the space with a non-breaking space. This would deal with instances such as <i>2.54 cm</i>. For phrases like <i>chapter 5</i> it would be better to create a set of watch-words rather than attaching every number to a preceding string. Additionally rules would need to be created to handle common mathematical operators as in <i>4 × 4</i>.
           </p>
@@ -1485,17 +1503,18 @@ p + p + p + p {
             The <code>page-break-before</code> and <code>page-break-after</code> properties enable you to say that a page break should occur before or after the specified element. The following example starts a new page everytime an <code>h1</code> heading is encountered and after every <code>.section</code> block.
           </p>
           <pre data-lang="CSS"><code>h1 {
-      page-break-before: always;
-    }
-    .section {
-      page-break-after: always;
-    }</code></pre>
+  page-break-before: always;
+}
+
+.section {
+  page-break-after: always;
+}</code></pre>
           <p>
             If you know (or can calculate) when a paragraph will be split over two pages, you could achieve some crude widow and orphan control by giving that paragraph a relevant class and forcing a page break before it, for example:
           </p>
           <pre data-lang="CSS"><code>.dontsplit {
-      page-break-before: always;
-    }</code></pre>
+  page-break-before: always;
+}</code></pre>
           <p>
             In reality that is not a likely situation and would always be problematic if readers set their browsers to print out different size text, or use different size paper, to your assumptions. 
           </p>
@@ -1509,15 +1528,15 @@ p + p + p + p {
             A relative of the <code>page-break-after</code> property mentioned earlier is <code>page-break-inside</code> which stops elements spanning pages. For example you may like to apply this rule to all headings:
           </p>
           <pre data-lang="CSS"><code>h1, h2, h3, h4, h5, h6 {
-      page-break-inside: never;
-    }</code></pre>
+  page-break-inside: never;
+}</code></pre>
           <p>
           Precise widow and orphan control is also available through the <code>widows</code> and <code>orphans</code> properties. The value of the property is the minimum number of lines which is allowed to be widowed or orphaned. For example you can prevent less than four lines of a paragraph being left behind or printed on a new page using the following:
           </p>
           <pre data-lang="CSS"><code>p {
-      widows: 4;
-      orphans: 4;
-    }</code></pre>
+  widows: 4;
+  orphans: 4;
+}</code></pre>
         </section>
         <section id="3.1.1_Don’t_compose_without_a_scale"
                  class="main-section">
@@ -1538,26 +1557,30 @@ p + p + p + p {
           <p>
             For text which is to be printed, the <code>font-size</code> property can and should be used to set in text in points, for example:
           </p>
-          <pre data-lang="CSS"><code>p { font-size: 12pt; }</code></pre>
+          <pre data-lang="CSS"><code>p {
+  font-size: 12pt;
+}</code></pre>
           <p>
             For text which is to be read on screen, the situation is slightly more complicated. Arguably the most appropriate unit is pixels which is a unit relative to the screen resolution. Setting text sizes in pixels gives web designers precision similar to that afforded to print designers. However, Internet Explorer does not allow readers to resize text set in pixels (although <abbr>IE7</abbr> does provide full page zooming), so we need to look to other units.
           </p>
           <p>
             Sizing text using the <code>em</code> unit is the next most appropriate approach. The em is a true typographic unit and was <a class="ext-link" href="http://www.w3.org/WAI/GL/css2em.htm" target="_blank">recommended by the <abbr>W3C</abbr></a> from the outset of <abbr>CSS</abbr>. Ems are a relative unit and act as multipliers based on the text element’s parent element. Thus, if the <code>body</code> of a web page has 16 px text by default, making paragraphs render at 12 px would require setting paragraphs at <code>0.75em</code>.
           </p>
-          <pre data-lang="CSS"><code>p { font-size:0.75em; /* 16x0.75=12 */ }</code></pre>
+          <pre data-lang="CSS"><code>p {
+  font-size:0.75em; /* 16x0.75=12 */
+}</code></pre>
           <p>
             One further problem arises with this method: <abbr>IE6</abbr> and <abbr>IE7</abbr> unacceptably exaggerate the smallness and largeness of the resized text. This can be solved by setting a percentage <code>font-size</code> on the <code>body</code>.
           </p>
           <p>
             So choosing from the traditional scale, our final font sizing style sheet could look as follows:
           </p>
-          <pre data-lang="CSS"><code>body { font-size: 100%; }
-    h1 { font-size: 2.25em;  /* 16x2.25=36 */ }
-    h2 { font-size: 1.5em;   /* 16x1.5=24 */ }
-    h3 { font-size: 1.125em; /* 16x1.125=18 */ }
-    h4 { font-size: 0.875em; /* 16x0.875=14 */ }
-    p  { font-size: 0.75em;  /* 16x0.75=12 */ }</code></pre>
+          <pre data-lang="CSS"><code>body {font-size: 100%; }
+h1 { font-size: 2.25em;  /* 16x2.25=36 */ }
+h2 { font-size: 1.5em;   /* 16x1.5=24 */ }
+h3 { font-size: 1.125em; /* 16x1.125=18 */ }
+h4 { font-size: 0.875em; /* 16x0.875=14 */ }
+p  { font-size: 0.75em;  /* 16x0.75=12 */ }</code></pre>
           <p>
             More details and analysis of font sizing can be found in <a class="ext-link" href="http://www.alistapart.com/articles/howtosizetextincss/" target="_blank">How to Size Text in <abbr>CSS</abbr></a>.
           </p>
@@ -1601,8 +1624,8 @@ p + p + p + p {
             For example, one could specify old-style figures using the <code>oldstyle-nums</code> value as follows:
           </p>
           <pre data-lang="CSS"><code>p {
-      font-variant-numeric: oldstyle-nums;
-    }</code></pre>
+  font-variant-numeric: oldstyle-nums;
+}</code></pre>
           <p>
             To specify titling figures, one would use a value of <code>lining-nums</code>.
           </p>
@@ -1629,10 +1652,10 @@ p + p + p + p {
             <a class="ext-link" href="https://docs.microsoft.com/en-us/typography/opentype/spec/" target="_blank">OpenType</a> supports the necessary features for this. These are well-supported by <code>font-variant-caps</code> and <code>font-variant-numeric</code> <abbr>CSS</abbr> properties from <a class="ext-link" href="https://www.w3.org/TR/css-fonts-3/" target="_blank">Fonts Module Level 3</a>. These properties have wide support in browsers. The trickier part of applying them is to make sure you are enabling these features on fonts that support these features rather than asking the browser to create the shrunken ‘parody’ versions Bringhust mentions. For example even fonts that support small caps and oldstyle numbers are served without them by Google Fonts.
           </p>
           <pre data-lang="CSS"><code>abbr {
-      font-variant-caps: all-small-caps;
-      font-variant-numeric: oldstyle-nums;
-      font-style: normal;
-    }</code></pre>
+  font-variant-caps: all-small-caps;
+  font-variant-numeric: oldstyle-nums;
+  font-style: normal;
+}</code></pre>
           <p>
             For <code>font-variant-caps</code> the difference between <code>small-caps</code> and <code>all-small-caps</code> is that the former only affects lowercase letters. The latter will convert all text to small caps. <code>font-style: normal</code> is because vanishingly small numbers of fonts provide italicized small caps.
           </p>
