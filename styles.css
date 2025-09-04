@@ -210,9 +210,11 @@ html {
 
 #navbar .links li .link p {
   color: #323232;
+  font-size: 1.5em;
   font-variant-caps: all-small-caps;
   font-weight: 700;
   letter-spacing: 0.05em;
+  line-height: 1.15;
   margin: 0;
   padding: 0.575em 1rem;
   transition: 0.3s ease-out;
