@@ -414,14 +414,16 @@ h1 {
             The <i>measure</i> is the number of characters in a single line of a column of text. <abbr>HTML</abbr> doesn’t have a concept of columns per se, instead text is held within <i>boxes</i>. In <abbr>CSS</abbr> the width of a box is set using the <code>width</code> property with any unit of length, for example:
           </p>
           <pre data-lang="CSS"><code>#col1 {
-      width: 400px;
-    }
-    #col2 {
-      width: 50%;
-    }
-    #col3 {
-      width:33em;
-    }</code></pre>
+  width: 400px;
+}
+
+#col2 {
+  width: 50%;
+}
+
+#col3 {
+  width:33em;
+}</code></pre>
           <p>
             When typographers set the measure and text size for printed media, those dimensions are fixed and unchangeable in their physical manifestation. In this regard, the Web as viewed on-screen is fundamentally different to print because the medium is far more under the control of your readers. In particular, if your reader wishes to change the text size or the dimensions of the ‘page’, they can do.
           </p>
@@ -466,14 +468,16 @@ h1 {
             Setting text justified or ragged is accomplished in <abbr>CSS</abbr> through the <code class="inline">text-align</code> property, as follows: 
           </p>
           <pre data-lang="CSS"><code>p {
-      text-align: left; /* ragged right */
-    }
-    p {
-      text-align: right; /* ragged left */
-    }
-    p {
-      text-align: justify;
-    }</code></pre>
+  text-align: left; /* ragged right */
+}
+
+p {
+  text-align: right; /* ragged left */
+}
+
+p {
+  text-align: justify;
+}</code></pre>
           <p>
             Effective justification of text can only be achieved if long words are hyphenated. <abbr>HTML</abbr> and <abbr>CSS 2</abbr> do not have any provision for automatic hyphenation and current Web browsers support, even for manual hyphenation, is poor.
           </p>
@@ -493,9 +497,9 @@ h1 {
             Setting <code>inter-character</code> selects the justification behaviour in which both inter-word and inter-letter spacing can be expanded or reduced to spread the text across the whole line. This is the significantly slower and more sophisticated type of the full justify behaviour preferred in newspaper and magazines. Typically, compression is tried first. If unsuccessful, expansion occurs: inter-word spaces are expanded up to a threshold, and finally inter-letter expansion is performed. For example:
           </p>
           <pre data-lang="CSS"><code>p {
-      text-align: justify;
-      text-justify: inter-character;
-    }</code></pre>
+  text-align: justify;
+  text-justify: inter-character;
+}</code></pre>
           <p>
             <abbr>CSS3</abbr> also provides last line alignment with the <code>text-align-last</code> property. Normally the last line in a paragraph of justified text would not be justified, however if <code>text-align-last</code> is set to <code>justify</code> then the last line will be also spread evenly across the line, although in most cases this would be highly undesirable from a typographical perspective.
           </p>
@@ -604,8 +608,8 @@ h1 {
             Letter spacing in <abbr>CSS</abbr> is achieved with the aptly named <code>letter-spacing</code> property. To letter space abbreviations at 10% of the type size you could wrap the abbreviations in <code>&lt;abbr&gt;</code> tags and apply a <abbr>CSS</abbr> rule such as:
           </p>
           <pre data-lang="CSS"><code>abbr {
-      letter-spacing: 0.1em;
-    }</code></pre>
+  letter-spacing: 0.1em;
+}</code></pre>
           <p>
             If you have created static pages for your website then inserting <code>&lt;acronym&gt;</code> and <code>&lt;abbr&gt;</code> elements where appropriate might be slightly tedious but probably feasible. Dealing with text delivered by a content management system, however, is a different kettle of fish and would need some sort of automation. At this point your <abbr>CMS</abbr> developer would probably turn to regular expressions. 
           </p>
@@ -613,8 +617,8 @@ h1 {
             I’m not going to explain regular expressions here – there are plenty of resources elsewhere on the web – but in the form of a <abbr>PHP</abbr> function here is an expression to get you started:
           </p>
           <pre data-lang="PHP"><code>$search = '/\b([A-Z][A-Z0-9]{2,})\b/';
-    $replace = '&lt;abbr&gt;$1&lt;/abbr&gt;';
-    $text = preg_replace($search,$replace,$text);</code></pre>
+$replace = '&lt;abbr&gt;$1&lt;/abbr&gt;';
+$text = preg_replace($search,$replace,$text);</code></pre>
           <p>
             This function looks for sequences of 3 or more uppercase letters or numbers, such as <abbr>CSS</abbr>, <abbr>HTML</abbr> and <abbr>W3C</abbr>, and wraps an <code>&lt;abbr&gt;</code> tag around them.
           </p>
@@ -639,10 +643,10 @@ h1 {
             There are however some fairly common typefaces to which letterspacing could be applied. Vaguely similar to the Univers bold condensed mentioned by Bringhurst are Impact and Haettenschweiler. These faces would only be used for headings and could be letterspaced using the <code>letter-spacing</code> property as follows:
           </p>
           <pre data-lang="CSS"><code>h2 {
-      font-family: "univers bold condensed", impact, haettenschweiler, sans-serif;
-      font-size: 200%;
-      letter-spacing: 0.1em;
-    }</code></pre>
+  font-family: "univers bold condensed", impact, haettenschweiler, sans-serif;
+  font-size: 200%;
+  letter-spacing: 0.1em;
+}</code></pre>
           <p>
             This would render as follows:
           </p>
@@ -678,7 +682,9 @@ h1 {
             Where you do wish to kern letter pairs, you must insert a neutral inline element, such as <code>span</code> and apply the <code>letter-spacing</code> property. For example:
           </p>
           <pre data-lang="HTML"><code>&lt;span class="kern">W&lt;/span&gt;ashington and &lt;span class="kern">T&lt;/span&gt;oronto</pre></code>
-          <pre data-lang="CSS"><code>.kern { letter-spacing: -0.1em; }</pre></code>
+          <pre data-lang="CSS"><code>.kern {
+  letter-spacing: -0.1em;
+}</pre></code>
           <p>
             Which should render as:
           </p>
@@ -720,7 +726,9 @@ h1 {
             <abbr>CSS</abbr> does not offer many opportunities for altering the width or shapes of letters. In fact only the <code>letter-spacing</code> property can be applied at all for this purpose, and that simply changes the width of the letters (but not their shape). The <code>letter-spacing</code> property can however be particularly destructive. Consider this maltreatment of a heading:
           </p>
           <pre data-lang="HTML"><code>&lt;h2 class="squish"&gt;letterfit&lt;/h2&gt;</code></pre>
-          <pre data-lang="CSS"><code>h2.squish { letter-spacing: -0.1em; }</code></pre>
+          <pre data-lang="CSS"><code>h2.squish {
+  letter-spacing: -0.1em;
+}</code></pre>
           <p>Resulting in:</p>
           <figure id="example-5">
             <p>
@@ -771,7 +779,7 @@ h1 {
           <p>
             This is a table of contents so it has been marked up as a simple table:
           </p>
-          <pre pre data-lang="HTML"><code>&lt;table&gt;
+          <pre data-lang="HTML"><code>&lt;table&gt;
       &lt;tr&gt;
         &lt;th>Introduction&lt;/th&gt;
         &lt;td>7&lt;/td&gt;
@@ -794,19 +802,21 @@ h1 {
           <p>
             The CSS looks like this:
           </p>
-          <pre pre data-lang="CSS"><code>table {
-      margin: 0 3em 0 auto;
-    }
-    th {
-      font-weight: normal;
-      text-align: right;
-      padding: 0;
-    }
-    td {
-      font-style: italic;
-      text-align: right;
-      padding: 0 0 0 0.5em;
-    }</code></pre>
+          <pre data-lang="CSS"><code>table {
+  margin: 0 3em 0 auto;
+}
+
+th {
+  font-weight: normal;
+  text-align: right;
+  padding: 0;
+}
+
+td {
+  font-style: italic;
+  text-align: right;
+  padding: 0 0 0 0.5em;
+}</code></pre>
           <p>
             While most of the <abbr>CSS</abbr> is straight forward, a point worth highlighting is the <code>margin</code> declaration for the <code>table</code> itself. There is a right margin of 3 em to set the table in slightly from the right gutter and a left margin of <code>auto</code> to push the table over towards the right hand side of the page.
           </p>
