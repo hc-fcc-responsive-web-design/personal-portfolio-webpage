@@ -51,6 +51,14 @@ h2 {
   /* Other */
 }
 
+a {
+  /* Positioning */
+  /* Display and Box model */
+  /* Typography */
+  color: var(--color-yellow);
+  /* Other */
+}
+
 /* GRID & CONTAINER */
 
 #container {
