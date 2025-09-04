@@ -129,7 +129,7 @@ html {
 }
 
 /*=====================*/
-/* MAIN                */
+/* SECTIONS            */
 /*=====================*/
 
 #main {
@@ -140,7 +140,7 @@ html {
   width: 100%;
 }
 
-#main #navbar {
+#navbar {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
   display: flex;
@@ -152,7 +152,7 @@ html {
   z-index: 6;
 }
 
-#main #welcome-section {
+#about {
   align-items: center;
   background-color: #31bde5;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
@@ -163,7 +163,7 @@ html {
   z-index: 4;
 }
 
-#main #projects {
+#projects {
   align-items: center;
   background-color: #232323;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
@@ -174,7 +174,7 @@ html {
   z-index: 3;
 }
 
-#main #contact {
+#contact {
   align-items: center;
   background-color: #0d4f97;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
@@ -184,7 +184,7 @@ html {
   z-index: 2;
 }
 
-#main #footer {
+#footer {
   background-color: #232323;
   grid-area: footer;
   z-index: 1;
@@ -194,7 +194,7 @@ html {
 /* NAVBAR              */
 /*=====================*/
 
-#navbar .links {
+.links {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -202,17 +202,17 @@ html {
   list-style-type: none;
 }
 
-#navbar .links li {
+.links li {
   height: 100%;
 }
 
-#navbar .links li .link {
+.links li .link {
   align-items: center;
   display: flex;
   height: 100%;
 }
 
-#navbar .links li .link p {
+.links li .link p {
   color: #323232;
   font-size: 1.5rem;
   font-variant-caps: all-small-caps;
@@ -224,7 +224,7 @@ html {
   transition: 0.3s ease-out;
 }
 	
-#navbar .links li .link p:hover {
+.links li .link p:hover {
   border-bottom: 1px solid #323232;
   border-top: 1px solid #323232;
 }
@@ -233,7 +233,7 @@ html {
 /* ABOUT               */
 /*=====================*/
 
-#welcome-section .inset {
+.inset {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -242,11 +242,11 @@ html {
   text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
 }
 
-#welcome-section .display {
+.display {
   font-family: "Arizonia", cursive;
 }
 
-#welcome-section .byline {
+.byline {
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.15;
