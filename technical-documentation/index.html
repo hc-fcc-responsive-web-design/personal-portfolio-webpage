@@ -780,22 +780,22 @@ $text = preg_replace($search,$replace,$text);</code></pre>
             This is a table of contents so it has been marked up as a simple table:
           </p>
           <pre data-lang="HTML"><code>&lt;table&gt;
-      &lt;tr&gt;
-        &lt;th>Introduction&lt;/th&gt;
-        &lt;td>7&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;th&gt;
-          Chapter &lt;strong>1&lt;/strong&gt;
-          The Sex of Centaurs
-        &lt;/th&gt;
-        &lt;td&gt;11&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;th&gt;
-          Chapter &lt;strong&gt;2&lt;/strong&gt;
-          Poliphilo&amp;#8217;s Dream
-        &lt;/th&gt;
+  &lt;tr&gt;
+    &lt;th>Introduction&lt;/th&gt;
+    &lt;td>7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      Chapter &lt;strong>1&lt;/strong&gt;
+      The Sex of Centaurs
+    &lt;/th&gt;
+    &lt;td&gt;11&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      Chapter &lt;strong&gt;2&lt;/strong&gt;
+      Poliphilo&amp;#8217;s Dream
+    &lt;/th&gt;
         &lt;td&gt;11&lt;/td&gt;
       &lt;/tr&gt;
     &lt;/table&gt;</code></pre>
@@ -852,33 +852,36 @@ td {
           <p>
             Again a simple table has been used for the markup:
           </p>
-          <pre pre data-lang="HTML"><code>&lt;table&gt;
-      &lt;tr&gt;&lt;th&gt;Prologue&lt;/th&gt;&lt;td&gt;page 5&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;Points of Possible Agreement&lt;/th&gt;&lt;td&gt;page 9&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;Irreconcilable Differences&lt;/th&gt;&lt;td&gt;page 11&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;Conclusion&lt;/th&gt;&lt;td&gt;page 163&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;Index&lt;/th&gt;&lt;td&gt;page 164&lt;/td&gt;&lt;/tr&gt;
-    &lt;/table&gt;</code></pre>
+          <pre data-lang="HTML"><code>&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Prologue&lt;/th&gt;&lt;td&gt;page 5&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Points of Possible Agreement&lt;/th&gt;&lt;td&gt;page 9&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Irreconcilable Differences&lt;/th&gt;&lt;td&gt;page 11&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Conclusion&lt;/th&gt;&lt;td&gt;page 163&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Index&lt;/th&gt;&lt;td&gt;page 164&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
           <p>
             The <abbr>CSS</abbr> looks like this:
           </p>
-          <pre pre data-lang="CSS"><code>table {
-      margin: 0 auto;
-    }
-    th {
-      font-weight: normal;
-      text-align: right;
-      padding: 0 0.5em 0 0;
-    }
-    td:before {
-      content: "\2022";
-      padding-right: 0.5em;
-    }
-    td {
-      font-style: italic;
-      text-align: left;
-      padding: 0;
-    }</code></pre>
+          <pre data-lang="CSS"><code>table {
+  margin: 0 auto;
+}
+
+th {
+  font-weight: normal;
+  text-align: right;
+  padding: 0 0.5em 0 0;
+}
+
+td:before {
+  content: "\2022";
+  padding-right: 0.5em;
+}
+
+td {
+  font-style: italic;
+  text-align: left;
+  padding: 0;
+}</code></pre>
           <p>
             There a couple of points worth noting in the <abbr>CSS</abbr>. The table has been centered by giving the left and right margins a value of <code>auto</code>. For block-level elements a <code>width</code> declaration would also be required when applying this technique, however tables have an inherent width so one does not need to be specified explicitly.
           </p>
@@ -903,9 +906,9 @@ td {
             Leading (pronounced “ledding”) is so called because, in mechanical presses, strips of lead are placed between lines of type to space the lines apart. Leading is achieved in <abbr>CSS</abbr> through the <code>line-height</code> property. For example 12 point text can be given 3 points of lead in the following manner:
           </p>
           <pre pre data-lang="CSS"><code>p {
-      font-size: 12pt;
-      line-height: 15pt;
-    }</code></pre>
+  font-size: 12pt;
+  line-height: 15pt;
+}</code></pre>
           <p>
             That example will give you the same line-height throughout all your paragraphs, however it does introduce the danger that, when the browser text size is increased by your reader (to 18 pt for example) the line-height may remain at 15 pt. The result being that, instead of the lines being spaced apart, they would actually overlap.
           </p>
@@ -913,15 +916,15 @@ td {
             A safer approach is to use a unitless value. The preceding example could also be coded as:
           </p>
           <pre pre data-lang="CSS"><code>p {
-      font-size: 12pt;
-      line-height: 1.25;
-    }</code></pre>
+  font-size: 12pt;
+  line-height: 1.25;
+}</code></pre>
           <p>
             In this example the value of <code>line-height</code> is a multiplier: 1.25 x 12 = 15 pt. This is a far more reliable method as the line-height (the distance between baselines) will always be proportional to the text size. Line height can be incorporated into the <code>font</code> property using a shorthand familiar to typographers:
           </p>
           <pre pre data-lang="CSS"><code>p {
-      font: 12pt/1.25 "Minion Pro", "Minion Web", serif;
-    }</code></pre>
+  font: 12pt/1.25 "Minion Pro", "Minion Web", serif;
+}</code></pre>
           <p>
             It should be noted that some browsers add a little leading by default: Safari and Internet Explorers for example; whereas others, such as Camino and Firefox, do not. Text on the web almost always benefits from an increase in line height, and figures upwards of 1.3 are common (this page has a <code>line-height</code> of 1.5 for example).
           </p>
@@ -937,10 +940,10 @@ td {
             Negative leading, in other words a <code>line-height</code> value of less than 1, can be used on short pieces of text provided care is taken to ensure ascenders and descenders do not collide. For example:
           </p>
           <pre data-lang="CSS"><code>.example {
-      font-size: 1.5em;
-      line-height: 0.85;
-      text-indent: -0.5em;
-    }</code></pre>
+  font-size: 1.5em;
+  line-height: 0.85;
+  text-indent: -0.5em;
+}</code></pre>
           <figure id="example-13">
             <p>
               this is an example
@@ -966,10 +969,10 @@ td {
             The most common addition of vertical space on a webpage is that inserted between paragraphs. If the rhythm of the page is to be maintained, the spacing of paragraphs should be related to the basic leading. For example, the text on this page is set at 12 px with a <code>line-height</code> of 1.5 em, making each line 18 px in height. In order to keep the rhythm of the text, the vertical spacing between blocks should also be 18 px. This is achieved by setting top- and bottom-margins equal to the line height.
           </p>
           <pre data-lang="CSS"><code>p {
-      line-height: 1.5;
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-    }</code></pre>
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}</code></pre>
           <p>
             It should be noted that the default treatment by web browsers of paragraphs (and other block level elements such as blockquotes and lists) is to insert a top- and bottom-margin of 1 em. The implication is that margins must always be specified by the designer.
           </p>
@@ -986,10 +989,10 @@ td {
             The subheadings on this page are set to 14 px. In order that the height of each line is 18 px, the <code>line-height</code> should be set to 18 ÷ 14 = 1.286. Similarly the margins above and below the heading must be adjusted. The temptation is to set heading margins to a simple 1 em, or leave them at the browser default, but this would usually result in breaking the rhythm of the text. In the case of this page, the top and bottom margins are the same size and equal to a full line, so they too should be set at 1.286 em.
           </p>
           <pre data-lang="CSS"><code>h2 {
-      line-height: 1.286;
-      margin-top: 1.286em;
-      margin-bottom: 1.286em;
-    }</code></pre>
+  line-height: 1.286;
+  margin-top: 1.286em;
+  margin-bottom: 1.286em;
+}</code></pre>
           <p>
             One can also set asymmetrical margins for headings, provided the margins combine to be multiples of the basic line height. For example, a top margin of 1½ lines could be combined with a bottom margin of half a line as follows:
           </p>
@@ -997,10 +1000,10 @@ td {
             <img src="http://webtypography.net/i/2-2-2i.png" alt="Diagram of text showing how the basic leading is retained with a heading and asymmetrical margins">
           </figure>
           <pre data-lang="CSS"><code>h2 {
-      line-height: 1.286;
-      margin-top: 1.929em;
-      margin-bottom: 0.643em;
-    }</code></pre>
+  line-height: 1.286;
+  margin-top: 1.929em;
+  margin-bottom: 0.643em;
+}</code></pre>
           <p>
             By way of a further example, the main heading of the page you are reading has a text size of 18 px, therefore the <code>line-height</code> is set to 1 em, as are the margins.
           </p>
@@ -1051,8 +1054,8 @@ td {
             Paragraphs, and other block level elements, are indented using the <code>text-indent</code> property. To ensure a paragraph is set flush left, the text-indent should be set to zero:
           </p>
           <pre data-lang="CSS"><code>p {
-      text-indent: 0;
-    }</code></pre>
+  text-indent: 0;
+}</code></pre>
           <p>
             This rule is rarely necessary, however, because <abbr>CSS</abbr> specifies that the default initial value for <code>text-indent</code> should be <code>0</code>.
           </p>
@@ -1074,24 +1077,25 @@ td {
             Indenting the first line of a paragraph, or any block element is achieved in <abbr>CSS</abbr> using the <code>text-indent</code> property:
           </p>
           <pre data-lang="CSS"><code>p {
-      text-indent: 1em;
-    }</code></pre>
+  text-indent: 1em;
+}</code></pre>
           <p>
             The preceding rule will indent every paragraph, however we only wish to indent paragraphs that follow another paragraph. To achieve this, an adjacent sibling selector (+) can be used:
           </p>
           <pre data-lang="CSS"><code>p + p {
-      text-indent: 1em;
-    }</code></pre>
+  text-indent: 1em;
+}</code></pre>
           <p>
             Further, the line space between paragraphs which most browsers insert by default should be removed. Browsers create this line break by adding a top and bottom margin to paragraphs; the bottom margin should be removed from all paragraphs, and the top margin removed from those paragraphs which follow another paragraph:
           </p>
           <pre data-lang="CSS"><code>p {
-      margin-bottom: 0;
-    }
-    p + p {
-      text-indent: 1em;
-      margin-top: 0;
-    }</code></pre>
+  margin-bottom: 0;
+}
+
+p + p {
+  text-indent: 1em;
+  margin-top: 0;
+}</code></pre>
           <p>
             There is no limit to how much you indent by, but you may wish to start by describing a square. This can be achieved by setting your indent to the same value as your line-height.
           </p>
@@ -1114,12 +1118,13 @@ td {
             Marking paragraphs by outdenting them into the margin is achieved in the same manner as indenting: simply use a negative number for the indent.
           </p>
           <pre data-lang="CSS"><code>p {
-      margin-bottom: 0;
-    }
-    p + p {
-      text-indent: -1.5em;
-      margin-top: 0;
-    }</code></pre>
+  margin-bottom: 0;
+}
+
+p + p {
+  text-indent: -1.5em;
+  margin-top: 0;
+}</code></pre>
           <figure id="example-9">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci lacus, pretium sit amet congue id, eleifend id est. Vivamus non interdum dui. Quisque imperdiet sapien molestie turpis egestas, at volutpat magna euismod. Pellentesque semper mauris lacus. Etiam tempor sit amet mauris ut iaculis.
@@ -1135,13 +1140,14 @@ td {
             Ornamented indentation, unlike standard indentation, does not necessarily require the use of <code>text-indent</code> to achieve the primary effect (although it can aid clarity). The key to achieving this effect is the use of the <abbr>CSS</abbr> 2.1 <code>:before</code> pseudo-element to specify the ornamentation. The following example would insert a floral heart at the beginning of a subsequent paragraph:
           </p>
           <pre data-lang="CSS"><code>p {
-      margin-bottom: 0;
-    }
-    p + p:before { 
-      content: "\2767"; 
-      padding-right: 0.4em;
-      margin-top: 0;
-    }</code></pre>
+  margin-bottom: 0;
+}
+
+p + p:before { 
+  content: "\2767"; 
+  padding-right: 0.4em;
+  margin-top: 0;
+}</code></pre>
           <figure id="example-10">
             <p>
               Curabitur bibendum tempus feugiat. Nunc tristique, odio eu tempus sodales, dolor augue feugiat nulla, vitae imperdiet ex ex a felis. Donec a neque ex. Mauris vel sem at justo porttitor efficitur.
@@ -1156,12 +1162,15 @@ td {
           <p>
             Another use of ornaments as paragraph markers is to have a continuous stream of text with paragraphs separated by ornaments. To achieve this, the paragraphs should be set to display as <code>inline</code> elements, with ornamentation specified as before (in this case a decorative pilcrow is used in place of the floral heart bullet):
           </p>
-          <pre data-lang="CSS"><code>p { display: inline; }
-    p + p:before { 
-      content: "\2761"; 
-      padding-right: 0.1em;
-      padding-left: 0.4em;
-    }</code></pre>
+          <pre data-lang="CSS"><code>p { 
+  display: inline;
+}
+
+p + p:before { 
+  content: "\2761"; 
+  padding-right: 0.1em;
+  padding-left: 0.4em;
+}</code></pre>
           <figure id="example-11">
             <p>
               Aenean convallis ipsum at odio dictum ultricies id eget neque. Cras blandit sem sit amet mi vulputate, quis porta dui convallis. Morbi vel nisi non massa commodo rhoncus. 
@@ -1183,20 +1192,32 @@ td {
             A technique that can be applied is similar to that used for a continuous stream of text, in that it uses <code>display:inline</code> to achieve the horizontal positioning. Once the paragraphs are positioned horizontally, a relative top position equal to the line height applied to subsequent paragraphs can create the desired vertical positioning (and thus the full drop line effect):
           </p>
           <pre data-lang="CSS"><code>p {
-      display: inline; 
-      position: relative;
-    }
-    p + p { top: 1.3em; }</code></pre>
+  display: inline; 
+  position: relative;
+}
+
+p + p {
+  top: 1.3em;
+}</code></pre>
           <p>
             The problem with this approach is that the vertical positioning is not relative to the previous paragraph, only the parent box, and so all paragraphs after the first dropped paragraph appear to simply be part of a continuous stream of text. To achieve the full effect requires that each subsequent paragraph have a multiple of the original <code>top</code> position:
           </p>
           <pre data-lang="CSS"><code>p {
-      display: inline; 
-      position: relative;
-    }
-    p + p { top: 1.3em; }
-    p + p + p { top: 2.6em; }
-    p + p + p + p { top: 3.9em; }</code></pre>
+  display: inline; 
+  position: relative;
+}
+
+p + p {
+  top: 1.3em;
+}
+
+p + p + p {
+  top: 2.6em;
+}
+
+p + p + p + p {
+  top: 3.9em;
+}</code></pre>
           <p>
             Specifying top positions this way is clearly unwieldy, and a perfectly reasonable candidate for implementing in JavaScript. The technique might be applicable to display material where there are only short runs of text.
           </p>
@@ -1218,8 +1239,8 @@ td {
             Adding a gap between a block quotation and the main text is best achieved by applying a top and bottom margin to the blockquote. By default, browsers usually apply a left and right margin as well. You may wish to remove this altogether by setting the margins to zero. If you wish to retain the indent, a more consistent layout can be achieved by applying left and right margins equal to the top and bottom margins.
           </p>
           <pre data-lang="CSS"><code>blockquote {
-      margin:1.5em;
-    }</code></pre>
+  margin:1.5em;
+}</code></pre>
           <p>
             As explained in <a href="#Add_and_delete_vertical_space_in_measured_intervals" target="_blank">§2.2.2</a>, the margins should be sized so that the rhythm of the text is maintained. Where the blockquote text size is the same as the main text, the separating margins should be set equal to the line-height.
           </p>
