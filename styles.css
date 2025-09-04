@@ -107,7 +107,6 @@ html {
 .link {
   display: block;
   text-decoration: none;
-
 }
 
 .link:visited {
@@ -209,7 +208,7 @@ html {
   height: 100%;
 }
 
-#navbar .links li .link h6 {
+#navbar .links li .link p {
   color: #323232;
   font-variant-caps: all-small-caps;
   font-weight: 700;
@@ -219,7 +218,7 @@ html {
   transition: 0.3s ease-out;
 }
 	
-#navbar .links li .link h6:hover {
+#navbar .links li .link p:hover {
   border-bottom: 1px solid #323232;
   border-top: 1px solid #323232;
 }
