@@ -85,6 +85,10 @@ small, .text_small {
   font-size: 0.8em;
 }
 
+.kern {
+  letter-spacing: 0.1em;
+}
+
 /*=====================*/
 /* GENERAL             */
 /*=====================*/
