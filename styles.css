@@ -11,6 +11,17 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
 /*=====================*/
 /* TYPOGRAPHY          */
 /*=====================*/
@@ -23,52 +34,46 @@ body {
   line-height: 1.65;
 }
 
-:where(h1) {
-  margin-block: 0.67em;
-  font-size: 2em;
-}
-
 h1 {
-  font-weight: 500;
-  line-height: 1.15;
   font-size: 11.391em;
   font-weight: 400;
-  margin-block-end: 1.05rem;
+  line-height: 1.15;
+  margin-bottom: 1.05rem;
 }
 
 h2 {
-  margin: 2.75rem 0 1.05rem;
+  font-size: 7.594em;
   font-weight: 500;
   line-height: 1.15;
-  font-size: 7.594em;
+  margin: 2.75rem 0 1.05rem;
 }
 
 h3 {
-  margin: 2.75rem 0 1.05rem;
+  font-size: 5.063em;
   font-weight: 500;
   line-height: 1.15;
-  font-size: 5.063em;
+  margin: 2.75rem 0 1.05rem;
 }
 
 h4 {
-  margin: 2.75rem 0 1.05rem;
+  font-size: 3.375em;
   font-weight: 500;
   line-height: 1.15;
-  font-size: 3.375em;
+  margin: 2.75rem 0 1.05rem;
 }
 
 h5 {
-  margin: 2.75rem 0 1.05rem;
+  font-size: 2.25em;
   font-weight: 500;
   line-height: 1.15;
-  font-size: 2.25em;
+  margin: 2.75rem 0 1.05rem;
 }
 
 h6 {
-  margin: 2.75rem 0 1.05rem;
+  font-size: 1.5em;
   font-weight: 500;
   line-height: 1.15;
-  font-size: 1.5em;
+  margin: 2.75rem 0 1.05rem;
 }
 
 p {
@@ -95,14 +100,16 @@ html {
 }
 
 .header {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .link {
-  text-decoration: none;
   display: block;
+  text-decoration: none;
+
 }
+
 .link:visited {
   color: inherit;
 }
@@ -143,10 +150,10 @@ html {
 }
 
 #main #welcome-section {
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
-  background-color: #31bde5;
-  background-size: 100px 51px;
   align-items: center;
+  background-color: #31bde5;
+  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
+  background-size: 100px 51px;
   display: flex;
   grid-area: about;
   justify-content: center;
@@ -154,10 +161,10 @@ html {
 }
 
 #main #projects {
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
-  background-color: #232323;
-  background-size: 100px 58px;
   align-items: center;
+  background-color: #232323;
+  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
+  background-size: 100px 58px;
   display: flex;
   flex-direction: column;
   grid-area: projects;
@@ -165,11 +172,11 @@ html {
 }
 
 #main #contact {
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
+  align-items: center;
   background-color: #0d4f97;
+  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
   background-size: 100px 58px;
   display: flex;
-  align-items: center;
   grid-area: contact;
   z-index: 2;
 }
@@ -197,9 +204,9 @@ html {
 }
 
 #navbar .links li .link {
-  height: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
 }
 
 #navbar .links li .link h6 {
@@ -222,12 +229,12 @@ html {
 /*=====================*/
 
 #welcome-section .inset {
-  background-color: #007697;
-  color: transparent;
-  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+  background-color: #007697;
+  color: transparent;
+  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
 }
 
 #welcome-section .display {
@@ -252,10 +259,10 @@ html {
 }
 
 #projects .tiles .project-tile {
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
   align-items: center;
   background: white;
   border-radius: 0.25rem;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #projects .tiles .project-tile .link {
@@ -295,8 +302,8 @@ html {
 #projects .tiles .project-tile .link .tile-header .tile-title {
   font-weight: 700;
   letter-spacing: 0.075em;
-  text-align: center;
   margin: 0;
+  text-align: center;
 }
 
 /*=====================*/
@@ -331,10 +338,10 @@ html {
 
 #contact .contact-links .link .icon {
   font-size: 2.587em;
-  line-height: 1;
-  width: 1em;
   height: 1em;
+  line-height: 1;
   margin-right: 1rem;
+  width: 1em;
 }
 
 #contact .contact-links .link h5 {
