@@ -244,6 +244,8 @@ pre code {
   padding: 1rem;
   /* Typography */
   /* Other */
+  tab-size: 2;
+  white-space: pre;
 }
 
 ul {
