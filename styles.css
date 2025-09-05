@@ -353,6 +353,6 @@ html {
   width: 1rem;
 }
 
-#contact .contact-links .link h2 {
+#contact .contact-links .link .byline {
   margin: 0;
 }
