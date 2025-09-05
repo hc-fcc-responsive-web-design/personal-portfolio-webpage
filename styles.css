@@ -11,17 +11,6 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-}
-
 /*=====================*/
 /* TYPOGRAPHY          */
 /*=====================*/
@@ -43,34 +32,6 @@ h1 {
 
 h2 {
   font-size: 7.594rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
-}
-
-h3 {
-  font-size: 5.063rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
-}
-
-h4 {
-  font-size: 3.375rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
-}
-
-h5 {
-  font-size: 2.25rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
-}
-
-h6 {
-  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.15;
   margin: 2.75rem 0 1.05rem;
@@ -258,7 +219,7 @@ html {
 /* PROJECTS            */
 /*=====================*/
 
-#projects .tiles {
+.tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem;
@@ -267,7 +228,7 @@ html {
   width: 100%;
 }
 
-#projects .tiles .project-tile {
+.project-tile {
   align-items: center;
   background: white;
   border-radius: 0.25rem;
