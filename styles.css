@@ -260,7 +260,7 @@ html {
 
 #projects .tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem;
   margin-top: 5.525rem;
   max-width: 67.5rem;
