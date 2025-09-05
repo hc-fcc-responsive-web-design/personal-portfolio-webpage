@@ -310,7 +310,7 @@ html {
 
 #projects .tiles .project-tile .link .tile-header .tile-title {
   font-weight: 700;
-  letter-spacing: 0.075rem;
+  letter-spacing: 0.05rem;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
