@@ -230,7 +230,7 @@ a:visited {
   height: 100%;
 }
 
-.tile-image {
+.tile-figure {
   box-sizing: border-box;
   height: auto;
   padding: 0;
@@ -252,11 +252,11 @@ a:visited {
   text-align: center;
 }
 
-.tile-link:hover .tile-image img {
+.tile-link:hover .tile-figure img {
   filter: grayscale(0%);
 }
 
-.tile-link .tile-image img {
+.tile-link .tile-figure img {
   border-radius: 0.25rem 0.25rem 0 0;
   display: block;
   filter: grayscale(100%);
