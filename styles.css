@@ -304,5 +304,6 @@ a:visited {
 }
 
 .contact-link-text {
+  color: inherit;
   margin: 0;
 }
