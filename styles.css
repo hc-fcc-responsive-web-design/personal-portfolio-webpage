@@ -253,10 +253,6 @@ a {
   text-align: center;
 }
 
-.tile-link:hover .tile-figure img {
-  filter: grayscale(0%);
-}
-
 .tile-link .tile-figure img {
   border-radius: 0.25rem 0.25rem 0 0;
   display: block;
@@ -264,6 +260,10 @@ a {
   object-fit: cover;
   transition: 0.3s ease-out;
   width: 100%;
+}
+
+.tile-link:hover .tile-figure img {
+  filter: grayscale(0%);
 }
 
 /*=====================*/
