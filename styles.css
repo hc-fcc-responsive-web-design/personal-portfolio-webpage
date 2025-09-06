@@ -153,8 +153,6 @@ a {
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid #323232;
-  border-top: 1px solid #323232;
   color: #323232;
 }
 
@@ -168,6 +166,11 @@ a {
   margin: 0;
   padding: 0.575rem 1rem;
   transition: 0.3s ease-out;
+}
+
+.nav-link-text:hover {
+  border-bottom: 1px solid #323232;
+  border-top: 1px solid #323232;
 }
 
 /*=====================*/
