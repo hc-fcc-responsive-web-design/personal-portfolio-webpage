@@ -52,13 +52,8 @@ p {
 }
 
 a {
-  color: #323232;
   display: block;
   text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
 }
 
 .vignette {
@@ -151,13 +146,20 @@ a:visited {
 }
 
 .nav-link {
+  color: #323232;
   align-items: center;
   display: flex;
   height: 100%;
 }
 
-.nav-link-text {
+.nav-link:hover {
+  border-bottom: 1px solid #323232;
+  border-top: 1px solid #323232;
   color: #323232;
+}
+
+.nav-link-text {
+  color: inherit;
   font-size: 1.5rem;
   font-variant-caps: all-small-caps;
   font-weight: 700;
@@ -166,11 +168,6 @@ a:visited {
   margin: 0;
   padding: 0.575rem 1rem;
   transition: 0.3s ease-out;
-}
-	
-.nav-link-text:hover {
-  border-bottom: 1px solid #323232;
-  border-top: 1px solid #323232;
 }
 
 /*=====================*/
@@ -225,9 +222,14 @@ a:visited {
 }
 
 .tile-link {
+  color: #323232;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.tile-link:hover {
+  color: #323232;
 }
 
 .tile-figure {
@@ -296,6 +298,10 @@ a:visited {
   padding: 0.575rem 1rem;
 }
 
+.contact-link:hover {
+  color: white;
+}
+
 .icon {
   font-size: 2.587rem;
   height: 1em;
@@ -304,6 +310,5 @@ a:visited {
 }
 
 .contact-link-text {
-  color: inherit;
   margin: 0;
 }
