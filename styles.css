@@ -12,14 +12,6 @@
 }
 
 /*=====================*/
-/* TYPOGRAPHY          */
-/*=====================*/
-
-.kern {
-  letter-spacing: 0.09375rem;
-}
-
-/*=====================*/
 /* GENERAL             */
 /*=====================*/
 
@@ -40,6 +32,11 @@ p {
   margin-bottom: 1.15rem;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+}
+
 .section {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
   padding: 5.525rem 2rem;
@@ -51,9 +48,21 @@ p {
   width: 100%;
 }
 
-a {
-  display: block;
-  text-decoration: none;
+.inset {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-color: #007697;
+  color: transparent;
+  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
+}
+
+.display {
+  font-family: "Arizonia", cursive;
+}
+
+.kern {
+  letter-spacing: 0.09375rem;
 }
 
 .vignette {
@@ -182,19 +191,6 @@ a {
   font-weight: 400;
   line-height: 1.15;
   margin-bottom: 1.05rem;
-}
-
-.inset {
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  background-color: #007697;
-  color: transparent;
-  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
-}
-
-.display {
-  font-family: "Arizonia", cursive;
 }
 
 .byline {
