@@ -156,7 +156,7 @@ a:visited {
   height: 100%;
 }
 
-.nav-link p {
+.nav-link-text {
   color: #323232;
   font-size: 1.5rem;
   font-variant-caps: all-small-caps;
@@ -168,7 +168,7 @@ a:visited {
   transition: 0.3s ease-out;
 }
 	
-.nav-link p:hover {
+.nav-link-text:hover {
   border-bottom: 1px solid #323232;
   border-top: 1px solid #323232;
 }
@@ -237,19 +237,6 @@ a:visited {
   width: 100%;
 }
 
-.tile-link:hover .tile-image img {
-  filter: grayscale(0%);
-}
-
-.tile-link .tile-image img {
-  border-radius: 0.25rem 0.25rem 0 0;
-  display: block;
-  filter: grayscale(100%);
-  object-fit: cover;
-  transition: 0.3s ease-out;
-  width: 100%;
-}
-
 .tile-header {
   background-color: #31bde5;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -265,6 +252,19 @@ a:visited {
   text-align: center;
 }
 
+.tile-link:hover .tile-image img {
+  filter: grayscale(0%);
+}
+
+.tile-link .tile-image img {
+  border-radius: 0.25rem 0.25rem 0 0;
+  display: block;
+  filter: grayscale(100%);
+  object-fit: cover;
+  transition: 0.3s ease-out;
+  width: 100%;
+}
+
 /*=====================*/
 /* CONTACT             */
 /*=====================*/
@@ -273,7 +273,7 @@ a:visited {
   justify-content: center;
 }
 
-#contact .contact-links {
+.contact-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -283,19 +283,19 @@ a:visited {
 }
 	
 @media screen and (max-width: 67.5rem) {
-  #contact .contact-links {
+  .contact-links {
     flex-direction: column;
   }
 }
 
-#contact .contact-links .link {
+.contact-link {
   color: white;
   display: flex;
   flex-direction: row;
   padding: 0.575rem 1rem;
 }
 
-#contact .contact-links .link .icon {
+.icon {
   font-size: 2.587rem;
   height: 1rem;
   line-height: 1;
@@ -303,6 +303,6 @@ a:visited {
   width: 1rem;
 }
 
-#contact .contact-links .link .byline {
+.contact-link-text {
   margin: 0;
 }
