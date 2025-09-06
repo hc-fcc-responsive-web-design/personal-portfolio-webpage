@@ -51,10 +51,6 @@ p {
   width: 100%;
 }
 
-small, .text_small {
-  font-size: 0.8rem;
-}
-
 .link {
   color: #323232;
   display: block;
