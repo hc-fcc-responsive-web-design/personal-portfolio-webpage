@@ -132,6 +132,7 @@ a {
   background-color: #0d4f97;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
   background-size: 100px 58px;
+  flex-direction: column;
   grid-area: contact;
   z-index: 2;
 }
