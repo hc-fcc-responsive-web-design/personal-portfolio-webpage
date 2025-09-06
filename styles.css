@@ -39,6 +39,7 @@ a {
 
 .section {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
+  display: flex;
   padding: 5.525rem 2rem;
   position: relative;
 }
@@ -100,12 +101,14 @@ a {
   z-index: 6;
 }
 
+/*=====================*/
+/* SECTIONS            */
+/*=====================*/
 #about {
   align-items: center;
   background-color: #31bde5;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
   background-size: 100px 51px;
-  display: flex;
   grid-area: about;
   justify-content: center;
   z-index: 4;
@@ -116,7 +119,6 @@ a {
   background-color: #232323;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
   background-size: 100px 58px;
-  display: flex;
   flex-direction: column;
   grid-area: projects;
   z-index: 3;
@@ -127,7 +129,6 @@ a {
   background-color: #0d4f97;
   background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
   background-size: 100px 58px;
-  display: flex;
   grid-area: contact;
   z-index: 2;
 }
