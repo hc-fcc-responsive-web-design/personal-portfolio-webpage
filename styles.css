@@ -138,7 +138,7 @@ p {
 /* NAVBAR              */
 /*=====================*/
 
-.links {
+.nav {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -146,17 +146,17 @@ p {
   list-style-type: none;
 }
 
-.links li {
+.nav li {
   height: 100%;
 }
 
-.links li .link {
+.nav li .link {
   align-items: center;
   display: flex;
   height: 100%;
 }
 
-.links li .link p {
+.nav li .link p {
   color: #323232;
   font-size: 1.5rem;
   font-variant-caps: all-small-caps;
@@ -168,7 +168,7 @@ p {
   transition: 0.3s ease-out;
 }
 	
-.links li .link p:hover {
+.nav li .link p:hover {
   border-bottom: 1px solid #323232;
   border-top: 1px solid #323232;
 }
