@@ -51,13 +51,13 @@ p {
   width: 100%;
 }
 
-.link {
+a {
   color: #323232;
   display: block;
   text-decoration: none;
 }
 
-.link:visited {
+a:visited {
   color: inherit;
 }
 
@@ -146,17 +146,17 @@ p {
   list-style-type: none;
 }
 
-.nav li {
+.nav-item {
   height: 100%;
 }
 
-.nav li .link {
+.nav-link {
   align-items: center;
   display: flex;
   height: 100%;
 }
 
-.nav li .link p {
+.nav-link p {
   color: #323232;
   font-size: 1.5rem;
   font-variant-caps: all-small-caps;
@@ -168,7 +168,7 @@ p {
   transition: 0.3s ease-out;
 }
 	
-.nav li .link p:hover {
+.nav-link p:hover {
   border-bottom: 1px solid #323232;
   border-top: 1px solid #323232;
 }
