@@ -78,9 +78,8 @@ a {
 }
 
 /*=====================*/
-/* SECTIONS            */
+/* STRUCTURE           */
 /*=====================*/
-
 #main {
   display: grid;
   grid-template-areas: "navbar" "about" "projects" "contact" "footer";
