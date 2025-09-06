@@ -277,11 +277,6 @@ a {
 /*=====================*/
 /* CONTACT             */
 /*=====================*/
-
-#contact {
-  justify-content: center;
-}
-
 .contact-links {
   display: flex;
   flex-direction: row;
