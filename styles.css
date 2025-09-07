@@ -202,6 +202,7 @@ a {
 }
 
 .byline {
+  background-color: #007697;
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.15;
