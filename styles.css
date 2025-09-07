@@ -1,15 +1,73 @@
 /*=====================*/
-/* BROWSER RESET       */
+/* IMPORTS             */
 /*=====================*/
 
 @import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Domine&family=Great+Vibes&display=swap");
+
+
+/*=====================*/
+/* BROWSER RESET       */
+/*=====================*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*=====================*/
+/* VARIABLES           */
+/*=====================*/
+
+/* Colors */
+/* grays */
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$gray: rgba(50, 50, 50, 1);
+$light-gray: rgba(80, 80, 80, 1);
+$dark-gray: rgba(35, 35, 35, 1);
+$transparent-gray-25: rgba(0, 0, 0, 0.25);
+/* greens */
+$green: rgba(59, 197, 136, 1);
+/* aqua */
+$aqua: rgba(49, 189, 229, 1);
+$dark-aqua: rgba(0, 118, 151, 1);
+$light-aqua: rgba(49, 204, 208, 1);
+$highlight-aqua: rgba(0, 255, 255, 0.4);
+/* sky */
+$sky: rgba(1, 117, 206, 1);
+$dark-sky: rgba(0, 71, 151, 1);
+$light-sky: rgba(0, 126, 223, 1);
+$highlight-sky: rgba(0, 154, 255, 0.4);
+/* ocean */
+$ocean: rgba(13, 79, 151, 1);
+$dark-ocean: rgba(0, 35, 74, 1);
+$light-ocean: rgba(0, 60, 112, 1);
+$highlight-ocean: rgba(0, 129, 255, 0.4);
+
+/* Box Effects */
+$box-shadow: $transparent-gray-25 0px 2px 5px;
+
+/* SVG URLs */
+$seigaiha-url: url("https://gist.githubusercontent.com/5t4r8ucK/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
+$asanoha-url: url("https://gist.githubusercontent.com/5t4r8ucK/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
+$goma-url: url("https://gist.githubusercontent.com/5t4r8ucK/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
+
+/* PNG URLs*/
+$noise-url: url("https://raw.githubusercontent.com/5t4r8ucK/portfolio-page/master/noise.png");
+
+/* Sizes */
+$nav-height: 1.725rem + 2.75rem + 1.05rem; /* h6 line height + margin-top + margin-bottom */
+$spacing-1: 2rem;
+
+/* Breakpoints */
+$mobile-width: 20rem;
+$fhd-width: 67.5rem;
+
+/* Effects */
+$ease-out-transition: 0.3s ease-out;
 
 /*=====================*/
 /* GENERAL             */
@@ -60,6 +118,11 @@ a {
   display: flex;
   padding: 5.525rem 2rem;
   position: relative;
+}
+
+.section-title {
+  background-color: $white;
+  text-shadow: 1px 2px 3px rgba(255, 255, 255, 0.4);
 }
 
 .inset {
