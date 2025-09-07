@@ -27,6 +27,10 @@ body {
   line-height: 1.65;
 }
 
+h2 {
+  font-size: 5.063rem;
+}
+
 p {
   font-size: 1rem;
   margin-bottom: 1.15rem;
@@ -103,11 +107,6 @@ a {
 /*=====================*/
 /* SECTIONS            */
 /*=====================*/
-
-.section-title {
-  color: white;
-  font-size: 5.063rem;
-}
 
 #about {
   align-items: center;
