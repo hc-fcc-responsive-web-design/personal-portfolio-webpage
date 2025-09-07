@@ -51,16 +51,15 @@ a {
   text-decoration: none;
 }
 
+/*=====================*/
+/* SHARED              */
+/*=====================*/
+
 .section {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
   display: flex;
   padding: 5.525rem 2rem;
   position: relative;
-}
-
-.header {
-  text-align: center;
-  width: 100%;
 }
 
 .inset {
@@ -76,17 +75,6 @@ a {
 
 .kern {
   letter-spacing: 0.09375rem;
-}
-
-.vignette {
-  background: radial-gradient(circle at bottom, transparent 60%, black 170%);
-  height: 100%;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
 }
 
 /*=====================*/
@@ -111,6 +99,22 @@ a {
   position: fixed;
   width: 100%;
   z-index: 6;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+.vignette {
+  background: radial-gradient(circle at bottom, transparent 60%, black 170%);
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 /*=====================*/
