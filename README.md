@@ -6,10 +6,6 @@ https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-p
 
 Build an app that is functionally similar to https://personal-portfolio.freecodecamp.rocks.
 
-Do not copy this demo project.
-
-Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
-
 ## User Stories
 
 ### User Story #1
@@ -57,5 +53,7 @@ The height of the welcome section should be equal to the height of the viewport
 The navbar should always be at the top of the viewport
 
 ## Instructions
+
+Do not copy this demo project. Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
 
 **Note:** Be sure to add `<link rel="stylesheet" href="styles.css">` in your HTML to link your stylesheet and apply your CSS
