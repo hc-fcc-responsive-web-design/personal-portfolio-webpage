@@ -6,7 +6,7 @@ Build an app that is functionally similar to this example project. Try not to co
 
 Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-User Stories:
+## User Stories
 
 1. You should have a page title in an h1 element with an id of title.
 2. You should have a short explanation in a p element with an id of description.
