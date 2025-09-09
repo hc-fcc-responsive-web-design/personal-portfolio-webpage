@@ -12,41 +12,23 @@ Build an app that is functionally similar to https://personal-portfolio.freecode
 
 2. The welcome section should have an `h1` element that contains text
 
-### User Story #3
+3. Your portfolio should have a projects section with an `id` of `projects`
 
-Your portfolio should have a projects section with an `id` of `projects`
+4. The projects section should contain at least one element with a `class` of `project-tile` to hold a project
 
-### User Story #4
+5. The projects section should contain at least one link to a project
 
-The projects section should contain at least one element with a `class` of `project-tile` to hold a project
+6. Your portfolio should have a navbar with an `id` of `navbar`
 
-###  User Story #5
+7. The navbar should contain at least one link that you can click on to navigate to different sections of the page
 
-The projects section should contain at least one link to a project
+8. Your portfolio should have a link with an `id` of `profile-link`, which opens your GitHub or freeCodeCamp profile in a new tab
 
-###  User Story #6
+9. Your portfolio should have at least one media query
 
-Your portfolio should have a navbar with an `id` of `navbar`
+10. The height of the welcome section should be equal to the height of the viewport
 
-###  User Story #7
-
-The navbar should contain at least one link that you can click on to navigate to different sections of the page
-
-###  User Story #8
-
-Your portfolio should have a link with an `id` of `profile-link`, which opens your GitHub or freeCodeCamp profile in a new tab
-
-###  User Story #9
-
-Your portfolio should have at least one media query
-
-###  User Story #10
-
-The height of the welcome section should be equal to the height of the viewport
-
-###  User Story #11
-
-The navbar should always be at the top of the viewport
+11. The navbar should always be at the top of the viewport
 
 ## Instructions
 
