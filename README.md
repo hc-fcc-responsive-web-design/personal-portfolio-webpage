@@ -4,7 +4,7 @@ https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-p
 
 ## Objective
 
-Build an app that is functionally similar to https://personal-portfolio.freecodecamp.rocks.
+Build an app that is functionally similar to https://personal-portfolio.freecodecamp.rocks. Do not copy this demo project. Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
 
 ## User Stories
 
@@ -30,8 +30,6 @@ Build an app that is functionally similar to https://personal-portfolio.freecode
 
 11. The navbar should always be at the top of the viewport
 
-## Instructions
+## Note
 
-Do not copy this demo project. Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
-
-**Note:** Be sure to add `<link rel="stylesheet" href="styles.css">` in your HTML to link your stylesheet and apply your CSS
+Be sure to add `<link rel="stylesheet" href="styles.css">` in your HTML to link your stylesheet and apply your CSS.
