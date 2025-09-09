@@ -2,11 +2,9 @@
 
 https://www.freecodecamp.org/learn/full-stack-developer/lab-survey-form/build-a-survey-form
 
-Build an app that is functionally similar to this example project. Try not to copy the example project, give it your own personal style.
-
 ## Objective
 
-Fulfill the user stories below and get all the tests to pass to complete the lab.
+Build an app that is functionally similar to this example project. Try not to copy the example project, give it your own personal style. Fulfill the user stories below and get all the tests to pass to complete the lab.
 
 ## User Stories
 
