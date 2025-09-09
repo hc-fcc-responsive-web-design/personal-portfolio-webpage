@@ -4,7 +4,7 @@ https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-la
 
 ## Objective
 
-Build an app that is functionally similar to https://product-landing-page.freecodecamp.rocks.
+Build an app that is functionally similar to https://product-landing-page.freecodecamp.rocks. Do not copy this demo project. Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
 
 ## User Stories
 
@@ -68,9 +68,6 @@ Your product landing page should have at least one media query
 
 Your product landing page should utilize CSS flexbox at least once
 
-## Instructions
+## Note
 
-Do not copy this demo project. Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
-
-**Note:** Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
-
+Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
