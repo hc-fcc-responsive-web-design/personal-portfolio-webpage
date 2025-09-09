@@ -8,13 +8,9 @@ Build an app that is functionally similar to https://personal-portfolio.freecode
 
 ## User Stories
 
-### User Story #1
+1. Your portfolio should have a welcome section with an `id` of `welcome-section`
 
-Your portfolio should have a welcome section with an `id` of `welcome-section`
-
-### User Story #2
-
-The welcome section should have an `h1` element that contains text
+2. The welcome section should have an `h1` element that contains text
 
 ### User Story #3
 
