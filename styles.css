@@ -35,7 +35,8 @@
 
   /* Box Effects */
   --box-shadow-effect: var(--transparent-gray-25-color) 0px 2px 5px;
-  --text-shadow-effect:1px 2px 3px var(--highlight-aqua-color);
+  --title-shadow-effect: 1px 2px 3px var(--transparent-gray-25-color);
+  --text-shadow-effect: 1px 1px 1px var(--transparent-gray-25-color);
 
   /* SVG URLs */
   --seigaiha-url: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
@@ -44,14 +45,20 @@
 
   /* Sizes */
   --nav-height: 5.525rem;
-  --spacing-1: 2rem;
+  --border-radius: 0.25rem;
+  --spacing-1: 1rem;
+  --spacing-2: 2rem;
+  --text-margin: 1.15rem;
+
+  /* Typography */
+  --tile-title-size: 1.17rem;
 
   /* Breakpoints */
-  --mobile-width: 20rem; /* 320 */
-  --fhd-width: 67.5rem;
+  --mobile-width: 22.5rem; /* 360 */
+  --fhd-width: 67.5rem; /* 1080 */
 
   /* Effects */
-  --ease-out-transition-effect: 0.3s ease-out;
+  --transition-effect: 0.3s ease-out;
 }
 
 /*=====================*/
@@ -68,7 +75,7 @@ body {
 
 p {
   font-size: 1rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: var(--text-margin);
 }
 
 a {
@@ -85,7 +92,7 @@ a {
   box-shadow: var(--box-shadow-effect);
   display: flex;
   justify-content: center;
-  padding: var(--nav-height) var(--spacing-1);
+  padding: var(--nav-height) var(--spacing-2);
   position: relative;
 }
 
@@ -101,7 +108,7 @@ a {
 }
 
 .kern {
-  letter-spacing: 0.09375rem;
+  letter-spacing: 0.009375em;
 }
 
 /*=====================*/
@@ -149,6 +156,7 @@ a {
   grid-area: navbar;
   height: var(--nav-height);
   justify-content: center;
+  padding: 0 var(--spacing-2);
   position: fixed;
   width: 100%;
   z-index: 6;
@@ -158,6 +166,7 @@ a {
   background-color: var(--aqua-color);
   background-image: var(--seigaiha-url);
   background-size: 100px 51px;
+  flex-direction: column;
   grid-area: about;
   z-index: 4;
 }
@@ -194,6 +203,7 @@ a {
   align-items: center;
   display: flex;
   flex-direction: row;
+  gap: var(--spacing-2);
   justify-content: center;
   list-style-type: none;
 }
@@ -215,14 +225,14 @@ a {
 
 .nav-link-text {
   color: inherit;
-  font-size: 1.5rem;
+  font-size: var(--tile-title-size);
   font-variant-caps: all-small-caps;
   font-weight: 700;
   letter-spacing: 0.05rem;
   line-height: 1.15;
   margin: 0;
-  padding: 0.575rem 1rem;
-  transition: 0.3s ease-out;
+  padding: calc(var(--spacing-1) / 2) 0;
+  transition: var(--transition-effect);
 }
 
 .nav-link-text:hover {
@@ -241,20 +251,22 @@ a {
 
 .main-title {
   color: var(--white-color);
-  font-size: 11.391rem;
+  font-size: clamp(6rem, 7vw, 11.391rem);
   font-weight: 400;
   line-height: 1.15;
-  margin-bottom: 1.05rem;
-  text-shadow: var(--box-shadow-effect);
+  margin: var(--nav-height) 0 var(--text-margin);
+  text-shadow: var(--title-shadow-effect);
 }
 
 .byline {
   color: var(--white-color);
-  font-size: 2.25rem;
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
-  text-shadow: var(--box-shadow-effect);
+  font-size: var(--tile-title-size);
+  font-variant-caps: all-small-caps;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  margin: var(--nav-height) 0 var(--text-margin);
+  text-shadow: var(--text-shadow-effect);
 }
 
 /*=====================*/
@@ -263,18 +275,25 @@ a {
 
 .tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--mobile-width) - var(--spacing-2) * 2), 1fr));
+  grid-gap: var(--spacing-2);
   margin-top: var(--nav-height);
   max-width: var(--fhd-width);
   width: 100%;
 }
 
+@media screen and (min-width: 67.5rem) {
+  .tiles {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+
 .tile {
   align-items: center;
   background: var(--white-color);
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-effect);
+  width: 100%;
 }
 
 .tile-link {
@@ -297,25 +316,27 @@ a {
 
 .tile-header {
   background-color: var(--aqua-color);
-  border-radius: 0 0 calc(var(--spacing-1) / 8) calc(var(--spacing-1) / 8);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   flex-grow: 2;
-  padding: 0.575rem calc(var(--spacing-1) / 2);
+  padding: calc(var(--spacing-1) / 2) var(--spacing-1);
   width: 100%;
 }
 
-.tile-title {
+.tile-link-text {
+  color: var(--white-color);
+  font-size: var(--tile-title-size);
   font-weight: 700;
-  letter-spacing: 0.05rem;
   margin: 0;
   text-align: center;
+  text-shadow: var(--text-shadow-effect);
 }
 
 .tile-link .tile-figure img {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   display: block;
   filter: grayscale(100%);
   object-fit: cover;
-  transition: 0.3s ease-out;
+  transition: var(--transition-effect);
   width: 100%;
 }
 
@@ -329,24 +350,25 @@ a {
 
 .contact-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--mobile-width) - var(--spacing-2) * 2), 1fr));
+  grid-gap: var(--spacing-2);
   margin-top: var(--nav-height);
   max-width: var(--fhd-width);
   width: 100%;
 }
 
-@media screen and (max-width: 67.5rem) {
+@media screen and (min-width: 67.5rem) {
   .contact-tiles {
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }
 
 .contact-tile {
   align-items: center;
   background: var(--white-color);
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-effect);
+  width: 100%;
 }
 
 .contact-link {
@@ -354,9 +376,9 @@ a {
   color: var(--gray-color);
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: var(--spacing-2);
   justify-content: start;
-  padding: 1rem;
+  padding: calc(var(--spacing-1) / 2) var(--spacing-1);
 }
 
 .contact-link:hover {
@@ -371,7 +393,7 @@ a {
 }
 
 .contact-link-text {
-  font-size: 1.17rem;
+  font-size: var(--tile-title-size);
   font-weight: 700;
   line-height: 1;
   margin: 0;
