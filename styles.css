@@ -35,6 +35,7 @@
 
   /* Box Effects */
   --box-shadow-effect: var(--transparent-gray-25-color) 0px 2px 5px;
+  --text-shadow-effect:1px 2px 3px var(--highlight-aqua-color);
 
   /* SVG URLs */
   --seigaiha-url: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
@@ -239,21 +240,21 @@ a {
 }
 
 .main-title {
-  background-color: var(--dark-aqua-color);
+  color: var(--white-color);
   font-size: 11.391rem;
   font-weight: 400;
   line-height: 1.15;
   margin-bottom: 1.05rem;
-  text-shadow: 1px 2px 3px var(--highlight-aqua-color);
+  text-shadow: var(--box-shadow-effect);
 }
 
 .byline {
-  background-color: var(--dark-aqua-color);
+  color: var(--white-color);
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.15;
   margin: 2.75rem 0 1.05rem;
-  text-shadow: 1px 2px 3px var(--highlight-aqua-color);
+  text-shadow: var(--box-shadow-effect);
 }
 
 /*=====================*/
