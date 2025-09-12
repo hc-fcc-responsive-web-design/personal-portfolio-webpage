@@ -52,6 +52,7 @@
 
   /* Typography */
   --tile-title-size: 1.17rem;
+  --tile-line-height: 1.5rem;
 
   /* Breakpoints */
   --mobile-width: 22.5rem; /* 360 */
@@ -71,6 +72,7 @@ body {
   font-size: 100%;
   font-weight: 400;
   line-height: 1.65;
+  min-width: var(--mobile-width);
 }
 
 p {
@@ -229,7 +231,7 @@ a {
   font-variant-caps: all-small-caps;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  line-height: 1.15;
+  line-height: var(--tile-line-height);
   margin: 0;
   padding: calc(var(--spacing-1) / 2) 0;
   transition: var(--transition-effect);
@@ -264,7 +266,7 @@ a {
   font-variant-caps: all-small-caps;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  line-height: 1.5;
+  line-height: var(--tile-line-height);
   margin: var(--nav-height) 0 var(--text-margin);
   text-shadow: var(--text-shadow-effect);
 }
@@ -318,14 +320,17 @@ a {
   background-color: var(--aqua-color);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   flex-grow: 2;
-  padding: calc(var(--spacing-1) / 2) var(--spacing-1);
+  padding: var(--spacing-1);
   width: 100%;
 }
 
 .tile-link-text {
   color: var(--white-color);
   font-size: var(--tile-title-size);
+  font-variant-caps: all-small-caps;
   font-weight: 700;
+  letter-spacing: 0.05rem;
+  line-height: var(--tile-line-height);
   margin: 0;
   text-align: center;
   text-shadow: var(--text-shadow-effect);
@@ -378,7 +383,7 @@ a {
   flex-direction: row;
   gap: var(--spacing-2);
   justify-content: start;
-  padding: calc(var(--spacing-1) / 2) var(--spacing-1);
+  padding: var(--spacing-1);
 }
 
 .contact-link:hover {
@@ -394,7 +399,9 @@ a {
 
 .contact-link-text {
   font-size: var(--tile-title-size);
+  font-variant-caps: all-small-caps;
   font-weight: 700;
-  line-height: 1;
+  letter-spacing: 0.05rem;
+  line-height: var(--tile-line-height);
   margin: 0;
 }
