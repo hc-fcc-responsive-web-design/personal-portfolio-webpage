@@ -6,7 +6,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Domine&family=Great+Vibes&display=swap");
 
-
 /*=====================*/
 /* BROWSER RESET       */
 /*=====================*/
@@ -21,82 +20,49 @@
 /* VARIABLES           */
 /*=====================*/
 
-/* Colors */
-/* grays */
-$white: rgba(255, 255, 255, 1);
-$black: rgba(0, 0, 0, 1);
-$gray: rgba(50, 50, 50, 1);
-$light-gray: rgba(80, 80, 80, 1);
-$dark-gray: rgba(35, 35, 35, 1);
-$transparent-gray-25: rgba(0, 0, 0, 0.25);
-/* greens */
-$green: rgba(59, 197, 136, 1);
-/* aqua */
-$aqua: rgba(49, 189, 229, 1);
-$dark-aqua: rgba(0, 118, 151, 1);
-$light-aqua: rgba(49, 204, 208, 1);
-$highlight-aqua: rgba(0, 255, 255, 0.4);
-/* sky */
-$sky: rgba(1, 117, 206, 1);
-$dark-sky: rgba(0, 71, 151, 1);
-$light-sky: rgba(0, 126, 223, 1);
-$highlight-sky: rgba(0, 154, 255, 0.4);
-/* ocean */
-$ocean: rgba(13, 79, 151, 1);
-$dark-ocean: rgba(0, 35, 74, 1);
-$light-ocean: rgba(0, 60, 112, 1);
-$highlight-ocean: rgba(0, 129, 255, 0.4);
+:root {
+  /* Colors */
+  /* grays */
+  --white-color: rgba(255, 255, 255, 1);
+  --black-color: rgba(0, 0, 0, 1);
+  --gray-color: rgba(50, 50, 50, 1);
+  --dark-gray-color: rgba(35, 35, 35, 1);
+  --transparent-gray-25-color: rgba(0, 0, 0, 0.25);
+  /* aqua */
+  --aqua-color: rgba(49, 189, 229, 1);
+  --dark-aqua-color: rgba(0, 118, 151, 1);
+  --highlight-aqua-color: rgba(0, 255, 255, 0.4);
 
-/* Box Effects */
-$box-shadow: $transparent-gray-25 0px 2px 5px;
+  /* Box Effects */
+  --box-shadow-effect: var(--transparent-gray-25-color) 0px 2px 5px;
 
-/* SVG URLs */
-$seigaiha-url: url("https://gist.githubusercontent.com/5t4r8ucK/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
-$asanoha-url: url("https://gist.githubusercontent.com/5t4r8ucK/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
-$goma-url: url("https://gist.githubusercontent.com/5t4r8ucK/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
+  /* SVG URLs */
+  --seigaiha-url: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
+  --asanoha-url: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
+  --goma-url: url("https://gist.githubusercontent.com/HalloweenCreature/28f3ba5b3dc72e21d53dbaec2cb08c58/raw/aa7626b147fe2c233cd2b7553a98c426953d077e/goma_2.svg");
 
-/* PNG URLs*/
-$noise-url: url("https://raw.githubusercontent.com/5t4r8ucK/portfolio-page/master/noise.png");
+  /* Sizes */
+  --nav-height: 5.525rem;
+  --spacing-1: 2rem;
 
-/* Sizes */
-$nav-height: 1.725rem + 2.75rem + 1.05rem; /* h6 line height + margin-top + margin-bottom */
-$spacing-1: 2rem;
+  /* Breakpoints */
+  --mobile-width: 20rem; /* 320 */
+  --fhd-width: 67.5rem;
 
-/* Breakpoints */
-$mobile-width: 20rem;
-$fhd-width: 67.5rem;
-
-/* Effects */
-$ease-out-transition: 0.3s ease-out;
+  /* Effects */
+  --ease-out-transition-effect: 0.3s ease-out;
+}
 
 /*=====================*/
 /* GENERAL             */
 /*=====================*/
 
-html {
-  scroll-padding-top: 5.525rem;
-}
-
 body {
-  color: #232323;
+  color: var(--dark-gray-color);
   font-family: "Domine", serif;
   font-size: 100%;
   font-weight: 400;
   line-height: 1.65;
-}
-
-h1 {
-  font-size: 11.391rem;
-  font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 1.05rem;
-}
-
-h2 {
-  font-size: 5.063rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 2.75rem 0 1.05rem;
 }
 
 p {
@@ -114,15 +80,12 @@ a {
 /*=====================*/
 
 .section {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
+  align-items: center;
+  box-shadow: var(--box-shadow-effect);
   display: flex;
-  padding: 5.525rem 2rem;
+  justify-content: center;
+  padding: var(--nav-height) var(--spacing-1);
   position: relative;
-}
-
-.section-title {
-  background-color: $white;
-  text-shadow: 1px 2px 3px rgba(255, 255, 255, 0.4);
 }
 
 .inset {
@@ -146,31 +109,24 @@ a {
 
 #main {
   display: grid;
-  grid-template-areas: "navbar" "about" "projects" "contact" "footer";
+  grid-template-areas:
+    "navbar"
+    "about"
+    "projects"
+    "contact"
+    "footer";
   grid-template-columns: 100%;
-  grid-template-rows: auto minmax(100vh, auto) minmax(100vh, auto) minmax(100vh, auto) 5.525rem;
-  width: 100%;
-}
-
-#navbar {
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
-  display: flex;
-  grid-area: navbar;
-  height: 5.525rem;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  z-index: 6;
-}
-
-.header {
-  text-align: center;
+  grid-template-rows:
+    auto
+    minmax(100vh, auto)
+    minmax(100vh, auto)
+    minmax(100vh, auto)
+    var(--nav-height);
   width: 100%;
 }
 
 .vignette {
-  background: radial-gradient(circle at bottom, transparent 60%, black 170%);
+  background: radial-gradient(circle at bottom, transparent 60%, var(--black-color) 170%);
   height: 100%;
   left: 0;
   pointer-events: none;
@@ -184,20 +140,30 @@ a {
 /* SECTIONS            */
 /*=====================*/
 
-#about {
+#navbar {
   align-items: center;
-  background-color: #31bde5;
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/ba25ed3d707b0bd8a8dad5a2f23a0b08/raw/cf2d195f914b1f5e9b16bdf75fafff1306435f9a/Seigaiha.svg");
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-effect);
+  display: flex;
+  grid-area: navbar;
+  height: var(--nav-height);
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+}
+
+#about {
+  background-color: var(--aqua-color);
+  background-image: var(--seigaiha-url);
   background-size: 100px 51px;
   grid-area: about;
-  justify-content: center;
   z-index: 4;
 }
 
 #projects {
-  align-items: center;
-  background-color: #232323;
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/035e9d917d26b6ca274e592f98567ba2/raw/b1eed87a665078dda819f4e689b158964170f5ac/asanoha.svg");
+  background-color: var(--dark-gray-color);
+  background-image: var(--asanoha-url);
   background-size: 100px 58px;
   flex-direction: column;
   grid-area: projects;
@@ -205,9 +171,8 @@ a {
 }
 
 #contact {
-  align-items: center;
-  background-color: #0d4f97;
-  background-image: url("https://gist.githubusercontent.com/HalloweenCreature/01b5375d155ee3bf766daedffad1c202/raw/b7517f849f01af553c8ac1bc8995dd1e6deb5fd4/goma.svg");
+  background-color: var(--aqua-color);
+  background-image: var(--goma-url);
   background-size: 100px 58px;
   flex-direction: column;
   grid-area: contact;
@@ -215,7 +180,7 @@ a {
 }
 
 #footer {
-  background-color: #232323;
+  background-color: var(--dark-gray-color);
   grid-area: footer;
   z-index: 1;
 }
@@ -237,14 +202,14 @@ a {
 }
 
 .nav-link {
-  color: #323232;
+  color: var(--gray-color);
   align-items: center;
   display: flex;
   height: 100%;
 }
 
 .nav-link:hover {
-  color: #323232;
+  color: var(--gray-color);
 }
 
 .nav-link-text {
@@ -260,26 +225,35 @@ a {
 }
 
 .nav-link-text:hover {
-  border-bottom: 1px solid #323232;
-  border-top: 1px solid #323232;
+  border-bottom: 1px solid var(--gray-color);
+  border-top: 1px solid var(--gray-color);
 }
 
 /*=====================*/
 /* ABOUT               */
 /*=====================*/
 
+.header {
+  text-align: center;
+  width: 100%;
+}
+
 .main-title {
-  background-color: #007697;
-  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
+  background-color: var(--dark-aqua-color);
+  font-size: 11.391rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.05rem;
+  text-shadow: 1px 2px 3px var(--highlight-aqua-color);
 }
 
 .byline {
-  background-color: #007697;
+  background-color: var(--dark-aqua-color);
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.15;
   margin: 2.75rem 0 1.05rem;
-  text-shadow: 1px 2px 3px rgba(0, 255, 255, 0.4);
+  text-shadow: 1px 2px 3px var(--highlight-aqua-color);
 }
 
 /*=====================*/
@@ -290,27 +264,27 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem;
-  margin-top: 5.525rem;
-  max-width: 67.5rem;
+  margin-top: var(--nav-height);
+  max-width: var(--fhd-width);
   width: 100%;
 }
 
 .tile {
   align-items: center;
-  background: white;
+  background: var(--white-color);
   border-radius: 0.25rem;
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow-effect);
 }
 
 .tile-link {
-  color: #323232;
+  color: var(--gray-color);
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .tile-link:hover {
-  color: #323232;
+  color: var(--gray-color);
 }
 
 .tile-figure {
@@ -321,10 +295,10 @@ a {
 }
 
 .tile-header {
-  background-color: #31bde5;
-  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: var(--aqua-color);
+  border-radius: 0 0 calc(var(--spacing-1) / 8) calc(var(--spacing-1) / 8);
   flex-grow: 2;
-  padding: 0.575rem 1rem;
+  padding: 0.575rem calc(var(--spacing-1) / 2);
   width: 100%;
 }
 
@@ -351,34 +325,44 @@ a {
 /*=====================*/
 /* CONTACT             */
 /*=====================*/
-.contact-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5.525rem;
-  max-width: 67.5rem;
+
+.contact-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+  margin-top: var(--nav-height);
+  max-width: var(--fhd-width);
   width: 100%;
 }
-	
+
 @media screen and (max-width: 67.5rem) {
-  .contact-links {
+  .contact-tiles {
     flex-direction: column;
   }
 }
 
+.contact-tile {
+  align-items: center;
+  background: var(--white-color);
+  border-radius: 0.25rem;
+  box-shadow: var(--box-shadow-effect);
+}
+
 .contact-link {
-  color: white;
+  align-items: center;
+  color: var(--gray-color);
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding: 0.575rem 1rem;
+  justify-content: start;
+  padding: 1rem;
 }
 
 .contact-link:hover {
-  color: white;
+  color: var(--gray-color);
 }
 
-.icon {
+.contact-link-icon {
   font-size: 2.587rem;
   height: 1em;
   line-height: 1;
@@ -386,5 +370,8 @@ a {
 }
 
 .contact-link-text {
+  font-size: 1.17rem;
+  font-weight: 700;
+  line-height: 1;
   margin: 0;
 }
