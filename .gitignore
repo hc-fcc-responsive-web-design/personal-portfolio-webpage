@@ -1,1 +1,4 @@
 hc-free-code-camp-frontend-dev.code-workspace
+node_modules/
+dist/
+.env
